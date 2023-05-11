@@ -1,0 +1,24 @@
+/* 폰트를 두껍게 하려면 700또는 bold */
+.b-weight{
+  font-weight: bold;
+}
+
+
+.italic{
+  font-style: italic;
+}
+
+
+.delete{
+  text-decoration: underline;
+}
+
+
+.Unordered{
+  text-decoration: underline;
+}
+
+.blck{
+  background-color: yellowgreen;
+}
+ 

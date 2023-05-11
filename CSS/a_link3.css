@@ -1,0 +1,17 @@
+img{
+  width: 200px;
+}
+
+.google{
+  width: 500px; 
+  border: 2px solid blue;
+  margin: 0 auto;
+}
+
+.naver{
+  width: 400px;
+  height: 300px;
+  border: 2px solid green;
+  margin: 20px auto;
+  padding: 50px;
+}
