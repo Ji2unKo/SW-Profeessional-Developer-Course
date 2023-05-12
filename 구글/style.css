@@ -1,7 +1,26 @@
 * {
+margin: 0;
+}
 
+
+body{
+  background-color: black;
+}
+
+.google{
+  width: 500px;
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 100px;
 }
 
 img{
-  
+  width: 300px;
+}
+
+.white-bgc{
+  background-color: aliceblue;
+  border-radius: 20px;
+  padding: 20px;
+  margin-top: 20px;
 }
