@@ -75,6 +75,7 @@ background-color: #59c24b;
 
 .gnb-item {
   margin-right: 30px;
+  font-weight: bold;
 }
 
 /* gnb-item이라는 클래스를 가진 애들 중에서
@@ -82,5 +83,27 @@ background-color: #59c24b;
 */
 .gnb-item:last-child{
   margin-right: 0;
+}
+
+.my-name{
+  color: #fff;
+  margin-top: 30px;
+}
+
+/* info-section이라는 클래스 안에 있는 img태그에게만
+   지정된 스타일 적용
+    */
+.info-section img{
+  width: 300px;
+  height: 300px;
+  margin-top: 30px;
+  border-radius: 50%;
+  /* 1. cover
+    : 내용이 비율을 유지하면서 정의된 가로 X 세로
+    사이즈를 가득 채울 때 까지 확대된다.
+     2. contain
+     : 내용이 비율을 유지하면서 정의된 가로 X 세로
+     안에서 최대한으로 확대된다.
+   */
 }
 
