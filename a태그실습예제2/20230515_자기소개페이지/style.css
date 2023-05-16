@@ -81,11 +81,11 @@ background-color: #59c24b;
 /* gnb-item이라는 클래스를 가진 애들 중에서
    마지막요소
 */
-.gnb-item:last-child{
+.gnb-item:last-child {
   margin-right: 0;
 }
 
-.my-name{
+.my-name {
   color: #fff;
   margin-top: 30px;
 }
@@ -93,7 +93,7 @@ background-color: #59c24b;
 /* info-section이라는 클래스 안에 있는 img태그에게만
    지정된 스타일 적용
     */
-.info-section img{
+.info-section img {
   width: 300px;
   height: 300px;
   margin-top: 30px;
@@ -105,5 +105,25 @@ background-color: #59c24b;
      : 내용이 비율을 유지하면서 정의된 가로 X 세로
      안에서 최대한으로 확대된다.
    */
+}
+
+.contact-list {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.contact-list h3 {
+  color: #fff;
+  margin-right: 40px;
+}
+
+.contact-itme{
+  padding-right: 20px;
+}
+
+.contact-itme:last-child {
+  padding-right: 0;
 }
 
