@@ -1,0 +1,28 @@
+.wrapper {
+  margin: 0 auto;
+  width: 1200px;
+  font-size: 36px;
+}
+
+.header {
+  background-color: aquamarine;
+}
+
+.left-box {
+  height: 500px;
+  display: flex;
+  justify-content:start;
+  background-color: cornflowerblue;
+}
+
+.right-box {
+  height: 500px;
+  display: flex;
+  justify-items: end;
+  flex-direction: row;
+  background-color: coral;
+}
+
+.footer {
+  background-color: lightgreen;
+}
