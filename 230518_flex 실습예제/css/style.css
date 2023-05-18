@@ -1,3 +1,37 @@
-body {
-  background-color: aquamarine;
+.wrapper {
+  width: 100%;
+  background-color: black;
+}
+
+
+.nav {
+  width: 100%;
+  display: flex;
+}
+
+img {
+  width: 50px;
+}
+
+.gnb-list {
+  display: flex;
+  justify-content: end;
+  color: aliceblue;
+}
+
+.gnb-list li {
+  list-style: none;
+  font-weight: bold;
+  margin-left: 40px;
+  height: 100px;
+  width: 100px;
+
+}
+
+.order-list {
+  display: flex;
+}
+
+.gnd-item {
+  text-align: end;
 }
