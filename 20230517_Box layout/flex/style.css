@@ -2,27 +2,29 @@
   margin: 0 auto;
   width: 1200px;
   font-size: 36px;
+
 }
 
 .header {
+  height: 100px;
   background-color: aquamarine;
 }
 
 .left-box {
   height: 500px;
   display: flex;
-  justify-content:start;
+  justify-content: space-between;
   background-color: cornflowerblue;
 }
 
 .right-box {
   height: 500px;
   display: flex;
-  justify-items: end;
-  flex-direction: row;
+  justify-content: space-between;
   background-color: coral;
 }
 
 .footer {
+  height: 100px;
   background-color: lightgreen;
 }
