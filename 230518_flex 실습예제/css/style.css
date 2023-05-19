@@ -157,3 +157,27 @@ nav {
  .post-box-item p {
   margin-top: 30px;
  }
+
+ .footer-list {
+  display: flex;
+  justify-content: space-around;
+  background-color: #333;
+  display: flex;
+  color: #fff;
+ }
+
+
+ 
+
+.footer-list a {
+  color: #fff;
+  margin-right: 20px;
+}
+
+.footer-item {
+  display: flex;
+  justify-content: end;
+  align-items: end;
+  font-size: small;
+  font-weight: bold;
+}
