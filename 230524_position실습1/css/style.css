@@ -1,0 +1,120 @@
+/* i {
+  color: yellowgreen;
+  font-size: 48px;
+} */
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Source Code Pro', monospace;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  background-color: skyblue;
+}
+
+.logo img {
+  width: 50px;
+}
+
+.gnb-list {
+  display: flex;
+  justify-content: space-between;
+  width: 260px;
+}
+
+.gnb-item a {
+  color: #fff;
+  font-weight: 700;
+}
+
+.background {
+  height: 600px;
+  background-image: url(../images/스누피배경.jpeg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.back-txt {
+  height: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #fff;
+}
+
+.back-title {
+  font-size: 40px;
+}
+
+.back-content {
+  width: 70%;
+  margin: 40px;
+  font-size: small;
+  text-align: center;
+}
+
+.back-btn {
+  margin-top: 30px;
+  padding: 10px 10px;
+  border-radius: 10px;
+  border: none;
+  font-weight: bold;
+}
+
+.post-box-list div {
+  width: 400px;
+  margin: 0 auto;
+  border-radius: 20px;
+  padding: 10px;
+  text-align: center;
+}
+
+.post-box-list {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-bottom: 100px;
+}
+
+.post-box-item {
+  width: 250px;
+  margin: 300px;
+  background-color: skyblue;
+  text-align: center;
+  padding: 80px 20px;
+  font-size: small;
+}
+
+.footer-list {
+  display: flex;
+  justify-content: space-around;
+  background-color: skyblue;
+  color: #fff;
+}
+
+
+.footer-list a {
+  margin: 20px;
+  color: #fff;
+}
+
+.footer-item {
+  display: flex;
+  justify-content: end;
+  align-items: end;
+}
