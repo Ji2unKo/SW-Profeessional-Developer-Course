@@ -82,13 +82,14 @@ nav {
   border-radius: 20px;
   padding: 10px;
   text-align: center;
+  margin-top: 20px;
 }
 
 .post-box-list {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  margin-bottom: 100px;
+  margin-top: -100px;
 }
 
 .post-box-item {
@@ -100,9 +101,14 @@ nav {
   font-size: small;
 }
 
+.post-box-item p {
+  margin-top: 20px;
+  font-size: x-small;
+}
+
 .footer-list {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   background-color: skyblue;
   color: #fff;
 }
@@ -117,4 +123,48 @@ nav {
   display: flex;
   justify-content: end;
   align-items: end;
+}
+
+.position {
+  width: 200px;
+  height: 200px;
+  box-shadow: 5px 5px #666;
+  margin: 0 auto;
+  position: fixed;
+  top: 50px;
+  right: 50px;
+  background-color: #fff;
+  border-radius: 10px;
+}
+
+.position div {
+  text-align: center; 
+}
+
+.box {
+  margin-top: 20px;
+}
+
+
+.snoopy-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 600px;
+  background-color: skyblue;
+}
+
+.snoopy {
+  width: 500px;
+  height: 500px;
+  background-color: #fff;
+  background-image: url(../images/스누피2.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  background-attachment: fixed;
+}
+
+.scroll {
+  height: 20px;
 }
