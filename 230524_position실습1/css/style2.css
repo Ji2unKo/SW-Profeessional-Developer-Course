@@ -82,3 +82,33 @@ header nav {
 }
 
 
+/* .post-card > div:first-child 
+  박스 위쪽올리기 (-)  margin-top: -20px; */
+.post-card {
+  position: relative;
+  top: -50px;
+}
+
+/* > 꺽새) 자식한테 선택하는 선택자 */
+.post-card > div {
+  /* 글자 끝부분이 줄어듬 */
+  width: 80%;
+  /* 최대폭을 결정하는 속성 : 600px 이상은 커지지 말아라 */
+  /* 모니터창이 커지던 작던 600px 커졌다 작아졌다 안하고 고정 */
+  max-width: 600px;
+  /* 최소폭을 결정하는 속성 :300px 이하로는 작아지지 말아라 (동일한 화면으로 볼수있음) */
+  min-width: 300px;
+  /* 글자 박스들 가운데 정렬! */
+  /* 양 옆 = auto / top : 30px / bottom :0 */
+  margin: 30px auto 0 auto;
+  /* 박스 밖 여백 : margin-top: 30px; */
+  /* 글자 글씨들 가운데 정렬 */
+  border-radius: 10px;
+  text-align: center;
+  /* 박스 안쪽에 여백 넣어주기 */
+  padding: 30px;
+  background-color: rgb(217, 241, 254);
+}
+
+
+
