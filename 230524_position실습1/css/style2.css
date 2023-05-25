@@ -58,6 +58,8 @@ header nav {
 /* 마우스를 올렸다가 사라질 때 색 변화 방법 */
 .gnb-item a:hover {
   color: dodgerblue;
+  /* 호버했을때 폰트 사이즈로 입력후 작성 */
+  font-size: 18px;
 }
 
 /* nav에 호버 hover 했을 때 gnb-item 이라는 클래스 안에 있는 a태그들 한테 중괄호 안에 스탈일을 적용 */
