@@ -40,6 +40,7 @@ header nav {
   background-color: skyblue;
 }
 
+
 .logo img {
   width: 50px;
 }
@@ -48,9 +49,21 @@ header nav {
   display: flex;
 }
 
-.gnd-item a {
+.gnb-item a {
   padding: 20px;
+  /* 마우스 올렸다가 사라질 때 부드럽게 */
+  transition: color 500ms;
 }
+
+/* 마우스를 올렸다가 사라질 때 색 변화 방법 */
+.gnb-item a:hover {
+  color: dodgerblue;
+}
+
+/* nav에 호버 hover 했을 때 gnb-item 이라는 클래스 안에 있는 a태그들 한테 중괄호 안에 스탈일을 적용 */
+/* nav:hover .gnb-item a {
+  color: red;
+} */
 
 /* .gnd-item:last-child a {
   padding: 40px;
@@ -170,6 +183,19 @@ footer {
 
 .icon-item a {
   padding-right: 20px;
+
+}
+
+.icon-item a i {
+  /*   transition: all 0.5s; 0.5초로 줌 (500ms) 거의300~500을 줌 */
+  transition: all 500ms;
+}
+
+.icon-item a:hover i {
+  color: dodgerblue;
+  /* 아이콘 크기가 커질때 쓰는 속성 */
+  transform: scale(1.5);
+  /* transform: rotate(180deg);  아이콘 크기가 돌아갈때 쓰는 속성*/
 }
 
 .icon-item:last-child a {
@@ -210,4 +236,10 @@ footer {
   display: inline-block;
   padding: 10px 0;
   color: #888;
+  transition: all 500ms;
+}
+
+.side-menu-item a:hover {
+  color: dodgerblue;
+  text-decoration: underline;
 }
