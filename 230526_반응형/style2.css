@@ -43,6 +43,7 @@ header, footer {
 /* 1200px 미만 ~ 768px : 태블릿 T , M 으로도 표기한다 */
 /* 768px 미만 부터는 모바일 M ,S 로 표기한다 */
 /* media  바꿀 요소만 첨부 */
+/* 태블릿 */
 @media screen and (max-width : 1200px) {
   header, footer {
     background-color: skyblue;
@@ -55,3 +56,27 @@ header, footer {
   }
 }
 
+@media screen and (max-width : 768px) {
+  header, footer {
+    background-color: darkblue;
+    padding: 15px 0;
+  }
+  .back-img {
+    background-image: url(./images/back.jpg);
+  }
+
+  .box-list {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .box-list div {
+    width: 90%;
+    height: 150px;
+    margin-top: 20px;
+    border: 1px solid red;
+  }
+
+  .box-list div:first-child {
+    margin-top: 0;
+  }
