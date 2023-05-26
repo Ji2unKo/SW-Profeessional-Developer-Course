@@ -1,3 +1,62 @@
 body {
-  background-color: aqua;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* vh : viwport heigh (화면상 스크롤없이 알아서 계산해서 화면 가운데 정렬) */
+  height: 100vh;
 }
+
+.wrapper {
+  /* 상자 가운데 */
+  display: flex;
+  /* 각각 상자가 멀어지게 */
+  justify-content: space-between;
+  /* align-items: center; 한번에 가운데로 정렬하는 속성*/
+  width: 500px;
+  height: 500px;
+  border: 10px solid darkblue;
+}
+
+.wrapper:hover .box {
+  /* 박스들이 돌아가게 하는 속성 */
+  transform: rotate(-45deg);
+}
+
+.wrapper:hover .red {
+  border-color: red;
+}
+
+.wrapper:hover .yellow {
+  border-color: yellow;
+}
+
+.wrapper:hover .green {
+  border-color: green
+}
+
+/* red에 커서 됬을때 green 커지게 */
+
+.box {
+  width: 100px;
+  height: 100px;
+  border: 5px solid #000;
+  /* 박스 3개 한번에 돌아가게 만드는 속성 */
+  transition: transform 500ms;
+ }
+
+ .red {
+  background-color: red;
+ }
+
+ .yellow {
+  /* align-items: center; 자기자신아니니깐 활용 x !! */
+  /* 자기 자신이니깐 self 속성 활용 가운데로 center*/
+  align-self: center;
+  background-color: yellow;
+ }
+
+ .green {
+    /* 자기자긴이니깐 self 속성 활용 끝 아래 니깐 flex-end*/
+  align-self: flex-end;
+  background-color: green;
+ }
