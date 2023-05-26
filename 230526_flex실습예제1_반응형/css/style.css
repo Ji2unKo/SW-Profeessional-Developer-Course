@@ -166,8 +166,6 @@ nav {
  }
 
 
- 
-
 .footer-list a {
   color: #fff;
   margin-right: 20px;
@@ -181,4 +179,31 @@ nav {
   font-weight: bold;
 }
 
+@media screen and (max-width : 1200px) {
+  .first-box div{
+    padding: 80px 20px;
+  }
+  .post-box-list {
+    flex-direction: column;
+    align-items: center;
+   }
 
+   .post-box-item {
+    width: 500px;
+    margin: 15px auto;
+    padding: 80px 20px;
+    text-align: center;
+    color: #fff;
+    background-color: #000;
+    border-radius: 20px;
+   }
+ .post-box-item:last-child {
+  margin: 0;
+ }
+}
+
+@media screen and (max-width :768px) {
+  .first-box div{
+    padding: 20px 10px;
+  }
+}
