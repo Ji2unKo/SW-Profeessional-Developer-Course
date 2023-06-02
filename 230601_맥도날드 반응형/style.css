@@ -90,5 +90,5 @@ nav {
 .lnb-item a {
   color: #fff;
   /* 글자 상하 0 좌,우 양옆으로 20 px  */
-  padding: 0 20px;
+  padding: 0 20px; 
 }
