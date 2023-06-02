@@ -1,12 +1,7 @@
-/* i {
-  color: yellowgreen;
-  font-size: 48px;
-} */
-
 * {
   margin: 0;
   padding: 0;
-  font-family: 'Source Code Pro', monospace;
+  font-family: 'Exo 2', sans-serif;
 }
 
 li {
@@ -14,16 +9,37 @@ li {
 }
 
 a {
+  color: #fff;
   text-decoration: none;
 }
 
-nav {
+/* 웹 접근성을 높이기 위해 사용 (스크린 리더기) visually-hidden : 화면사에서 보이지않게 함 스크롤할때 인식하게 해줌*/
+.visually-hidden {
+  display: none;  
+}
+
+header {
+  height: 80px;
+}
+
+header nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 40px;
+  /* position : fixed를 주면 whdth값이 본인이 가진 콘텐츠 만큼 줄어든다. */
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  width: 100%;
+  height: 80px;
+  padding: 10px 20px;
+  /* 제자리 찾는걸 도와줌 (수정) */
+  box-sizing: border-box;
   background-color: skyblue;
 }
+
 
 .logo img {
   width: 50px;
@@ -31,140 +47,201 @@ nav {
 
 .gnb-list {
   display: flex;
-  justify-content: space-between;
-  width: 260px;
 }
 
 .gnb-item a {
-  color: #fff;
-  font-weight: 700;
+  padding: 20px;
+  /* 마우스 올렸다가 사라질 때 부드럽게 */
+  transition: color 500ms;
 }
 
+/* 마우스를 올렸다가 사라질 때 색 변화 방법 */
+.gnb-item a:hover {
+  color: dodgerblue;
+  /* 호버했을때 폰트 사이즈로 입력후 작성 */
+  font-size: 18px;
+}
+
+/* nav에 호버 hover 했을 때 gnb-item 이라는 클래스 안에 있는 a태그들 한테 중괄호 안에 스탈일을 적용 */
+/* nav:hover .gnb-item a {
+  color: red;
+} */
+
+/* .gnd-item:last-child a {
+  padding: 40px;
+} */
+
 .background {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   height: 600px;
   background-image: url(../images/스누피배경.jpeg);
   background-repeat: no-repeat;
-  background-position: center;
   background-size: cover;
-}
-
-.back-txt {
-  height: 600px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  background-position: center;
   color: #fff;
-}
-
-.back-title {
-  font-size: 40px;
-}
-
-.back-content {
-  width: 70%;
-  margin: 40px;
-  font-size: small;
   text-align: center;
 }
 
-.back-btn {
-  margin-top: 30px;
-  padding: 10px 10px;
-  border-radius: 10px;
-  border: none;
-  font-weight: bold;
+.main-title {
+  font-size: 48px;
 }
 
-.post-box-list div {
-  width: 400px;
-  margin: 0 auto;
-  border-radius: 20px;
+.main-content {
+  /* a,p 태그 사이의 간격 */
+  margin-top: 20px;
+}
+
+.main-btn {
+  /* 버튼을 통통하게 */
   padding: 10px;
-  text-align: center;
+  /* p ,버튼 사이의 간격 */
   margin-top: 20px;
-}
-
-.post-box-list {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  margin-top: -100px;
-}
-
-.post-box-item {
-  width: 250px;
-  margin: 300px;
-  background-color: skyblue;
-  text-align: center;
-  padding: 80px 20px;
-  font-size: small;
-}
-
-.post-box-item p {
-  margin-top: 20px;
-  font-size: x-small;
-}
-
-.footer-list {
-  display: flex;
-  justify-content: space-between;
-  background-color: skyblue;
-  color: #fff;
+  border-radius: 5px;
+  /* 테두리 없애기 */
+  border: none;
 }
 
 
-.footer-list a {
-  margin: 20px;
-  color: #fff;
+/* .post-card > div:first-child 
+  박스 위쪽올리기 (-)  margin-top: -20px; */
+.post-card {
+  position: relative;
+  top: -50px;
 }
 
-.footer-item {
-  display: flex;
-  justify-content: end;
-  align-items: end;
-}
-
-.position {
-  width: 200px;
-  height: 200px;
-  box-shadow: 5px 5px #666;
-  margin: 0 auto;
-  position: fixed;
-  top: 50px;
-  right: 50px;
-  background-color: #fff;
+/* > 꺽새) 자식한테 선택하는 선택자 */
+.post-card > div {
+  /* 글자 끝부분이 줄어듬 */
+  width: 80%;
+  /* 최대폭을 결정하는 속성 : 600px 이상은 커지지 말아라 */
+  /* 모니터창이 커지던 작던 600px 커졌다 작아졌다 안하고 고정 */
+  max-width: 600px;
+  /* 최소폭을 결정하는 속성 :300px 이하로는 작아지지 말아라 (동일한 화면으로 볼수있음) */
+  min-width: 300px;
+  /* 글자 박스들 가운데 정렬! */
+  /* 양 옆 = auto / top : 30px / bottom :0 */
+  margin: 30px auto 0 auto;
+  /* 박스 밖 여백 : margin-top: 30px; */
+  /* 글자 글씨들 가운데 정렬 */
   border-radius: 10px;
+  text-align: center;
+  /* 박스 안쪽에 여백 넣어주기 */
+  padding: 30px;
+  background-color: rgb(217, 241, 254);
 }
 
-.position div {
-  text-align: center; 
+.post-card > div:first-child {
+  margin-top: 0;
 }
 
-.box {
-  margin-top: 20px;
-}
-
-
-.snoopy-box {
+.fixed-back {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 600px;
-  background-color: skyblue;
+  background-color: rgb(217, 241, 254)
 }
 
-.snoopy {
-  width: 500px;
+.fixed-back-img {
+  width: 1000px;
   height: 500px;
   background-color: #fff;
   background-image: url(../images/스누피2.png);
+  /* 바둑판 이미지 안한다 */
   background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
+  background-size: 500px;
+  /* 이미지 위치를 정해줌 */
+  /* px, %, top, bottom, left, right */
+  /* px, % 사용시 왼쪽 상단을 기준으로 거리 기재한다. */
+  /* x, y (가로x 세로y) 모두 center일 때는 center 한 번만 써도 된다. */
+  background-position: center bottom;
+  /* 스크롤과 상관없이 고정 효과를 줌 */
   background-attachment: fixed;
 }
 
-.scroll {
-  height: 20px;
+footer {
+  /* 박스 여백 상하 */
+  padding: 20px 0;
+  background-color: skyblue;
+}
+
+.global-footer {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.global-footer h3 {
+  color: #fff;
+}
+
+.icon-list {
+  display: flex;
+}
+
+.icon-item a {
+  padding-right: 20px;
+
+}
+
+.icon-item a i {
+  /*   transition: all 0.5s; 0.5초로 줌 (500ms) 거의300~500을 줌 */
+  transition: all 500ms;
+}
+
+.icon-item a:hover i {
+  color: dodgerblue;
+  /* 아이콘 크기가 커질때 쓰는 속성 */
+  transform: scale(1.5);
+  /* transform: rotate(180deg);  아이콘 크기가 돌아갈때 쓰는 속성*/
+}
+
+.icon-item:last-child a {
+  padding-right: 0;
+}
+
+.icon-item i {
+  font-size: 20px;
+}
+
+.top-btn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+}
+
+.top-btn i {
+  font-size: 38px;
+  color: rgb(41 , 127, 161);
+}
+
+.side-menu {
+  position: fixed;
+  top: 150px;
+  right: 50px;
+}
+
+.side-menu-list {
+  width: 200px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 5px 5px 5px #888;
+  text-align: center;
+}
+
+.side-menu-item a {
+  /* padding 값을 줘도 변함없을땐 inline-block 입력해준다. */
+  display: inline-block;
+  padding: 10px 0;
+  color: #888;
+  transition: all 500ms;
+}
+
+.side-menu-item a:hover {
+  color: dodgerblue;
+  text-decoration: underline;
 }
