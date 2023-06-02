@@ -57,6 +57,6 @@ body {
 
  .green {
     /* 자기자긴이니깐 self 속성 활용 끝 아래 니깐 flex-end*/
-  align-self: flex-end;
+  align-self: end;
   background-color: green;
  }
