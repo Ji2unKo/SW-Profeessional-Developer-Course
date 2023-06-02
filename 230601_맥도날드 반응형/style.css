@@ -1,3 +1,69 @@
 * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
   font-family: 'Rubik', sans-serif;
 }
+
+li {
+  list-style: none;
+}
+
+a{
+  text-decoration: none;
+  color: #000;
+}
+
+/* 메뉴 라는 글자 안보이게 */
+.visually-hidden {
+  display: none;
+}
+
+/* sm : 모바일에서만 보이게 
+부트스트랩에서 권장하는 그리드 시스템
+sm (Small) 모바일 버전을 뜻합니다
+md (Medium) 768px , (아이패드)
+lg(Large) 1200px (데스크탑)*/
+.sm-only {
+  display: none;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* 부모박스 안에 5% */
+  width: 95%;
+  /* 박스 밖 상하좌우 똑같이 */
+  margin: 0 auto;
+  /* 상하에 10px 넣어주기 */
+  padding: 10px 0;
+  background-color: #fff;
+}
+
+.logo img {
+  width: 70px;
+}
+
+/* 메뉴 수평 정리 부모한테 주기 */
+.gnb-list {
+  display: flex;
+  /* 사이사이 간격 주기 */
+  justify-content: space-between;
+  /* 300px 간격 주기 */
+  width: 300px;
+}
+
+/* 자식 a 한테 폰트사이즈,웨이트도 변경 */
+.gnb-item a {
+  font-size: 16px;
+  font-weight: 700;
+  /* 부드럽게 마우스 움직이기,시간,패턴 */
+  transition: color 300ms ease-in-out;
+}
+
+/* 마우스 커버 했을때 색상변경 */
+.gnb-item a:hover {
+  color: red;
+}
+
