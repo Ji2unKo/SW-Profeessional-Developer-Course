@@ -9,21 +9,18 @@ li {
   list-style: none;
 }
 
-a{
+a {
   text-decoration: none;
   color: #000;
 }
 
-/* 메뉴 라는 글자 안보이게 */
 .visually-hidden {
   display: none;
 }
 
-/* sm : 모바일에서만 보이게 
-부트스트랩에서 권장하는 그리드 시스템
-sm (Small) 모바일 버전을 뜻합니다
-md (Medium) 768px , (아이패드)
-lg(Large) 1200px (데스크탑)*/
+/* 부트스트랩에서 권장하는 그리드 시스템 
+  sm(Small), md(Medium) 768px, lg(Large) 1200px
+*/
 .sm-only {
   display: none;
 }
@@ -32,11 +29,8 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* 부모박스 안에 5% */
   width: 95%;
-  /* 박스 밖 상하좌우 똑같이 */
   margin: 0 auto;
-  /* 상하에 10px 넣어주기 */
   padding: 10px 0;
   background-color: #fff;
 }
@@ -45,50 +39,98 @@ nav {
   width: 70px;
 }
 
-/* 메뉴 수평 정리 부모한테 주기 */
 .gnb-list {
   display: flex;
-  /* 사이사이 간격 주기 */
   justify-content: space-between;
-  /* 300px 간격 주기 */
   width: 300px;
 }
 
-/* 자식 a 한테 폰트사이즈,웨이트도 변경 */
 .gnb-item a {
   font-size: 16px;
   font-weight: 700;
-  /* 부드럽게 마우스 움직이기,시간,패턴 */
   transition: color 300ms ease-in-out;
 }
 
-/* 마우스 커버 했을때 색상변경 */
 .gnb-item a:hover {
   color: red;
 }
 
 .lnb-wrapper {
-  /* 끈적하게 붙어있어라!*/
   position: sticky;
   top: 0;
+  z-index: 10;
 }
 
 .lnb-list {
   display: flex;
-  /* 상하에 20px 좌우는 0 */
   padding: 20px 0;
-  /* 노란색 위에만 */
   border-top: 3px solid rgb(255, 213, 23);
   background-color: rgb(235, 27, 27);
 }
 
-/* 앞에 첫번째 여백 */
 .lnb-item:first-child {
   margin-left: 20px;
 }
 
 .lnb-item a {
   color: #fff;
-  /* 글자 상하 0 좌,우 양옆으로 20 px  */
   padding: 0 20px;
+}
+
+.background {
+  height: 600px;
+  background-image: url('./images/back.jpeg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.food-box {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 90%;
+  margin: 80px auto 0 auto;
+}
+
+.food-box-list {
+  display: flex;
+  margin-top: 30px;
+}
+
+.food-box-list:first-child {
+  margin-top: 0;
+}
+
+.food-box-item {
+  width: 300px;
+  margin-right: 30px;
+  border-radius: 10px;
+  box-shadow: 3px 3px 5px #e1e1e1;
+  overflow: hidden;
+}
+
+.food-box-item:last-child {
+  margin-right: 0;
+}
+
+.food-box-item a {
+  transition: opacity 300ms ease-in-out;
+}
+
+.food-box-item a:hover {
+  opacity: .7;
+}
+
+.food-box-item img {
+  width: 300px;
+  height: 250px;
+  object-fit: cover;
+}
+
+.food-box-txt {
+  width: 90%;
+  margin: 30px auto;
+  text-align: center;
+  font-weight: 700;
 }
