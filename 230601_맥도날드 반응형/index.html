@@ -15,9 +15,39 @@
   <meta name="theme-color" content="#ffffff">
   <!-- Font Awessome -->
   <script src="https://kit.fontawesome.com/41707c0594.js" crossorigin="anonymous"></script>
-  <!--  -->
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div class="wrapper"></div>
+  <div class="wrapper" id="top">
+    <header>
+      <nav>
+        <h1 class="logo">
+          <a href="./index.html">
+            <img src="./images/logo.png" alt="logo-img">
+          </a>
+        </h1>
+        <div class="gnb-icon-btn sm-only">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+
+        <!-- visually-hidden 메뉴 라는 화면을 보여주기위해서  -->
+        <h2 class="visually-hidden">메뉴</h2>
+        <!-- sm-hidden 데스크탑에서 보이지 말게 하려고 작성 -->
+        <ul class="gnb-list sm-hidden">
+          <li class="gnb-item"><a href="">menu1</a></li>
+          <li class="gnb-item"><a href="">menu2</a></li>
+          <li class="gnb-item"><a href="">menu3</a></li>
+          <li class="gnb-item">
+            <a href="">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </a></li>
+        </ul>
+      </nav>
+    </header>
+  </div>
+
 </body>
 </html>
