@@ -67,5 +67,28 @@ nav {
   color: red;
 }
 
+.lnb-wrapper {
+  /* 끈적하게 붙어있어라!*/
+  position: sticky;
+  top: 0;
+}
 
+.lnb-list {
+  display: flex;
+  /* 상하에 20px 좌우는 0 */
+  padding: 20px 0;
+  /* 노란색 위에만 */
+  border-top: 3px solid rgb(255, 213, 23);
+  background-color: rgb(235, 27, 27);
+}
 
+/* 앞에 첫번째 여백 */
+.lnb-item:first-child {
+  margin-left: 20px;
+}
+
+.lnb-item a {
+  color: #fff;
+  /* 글자 상하 0 좌,우 양옆으로 20 px  */
+  padding: 0 20px;
+}
