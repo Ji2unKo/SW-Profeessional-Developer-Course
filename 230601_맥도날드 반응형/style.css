@@ -185,6 +185,12 @@ footer {
   margin-right: 40px;
 }
 
+.mac-link-item a {
+  /* inline tag에 margin, padding 적용되지 않을때 display 확인 */
+  display: inline-block;
+  padding: 5px 0;
+}
+
 .mac-link-item:first-child a {
   color: rgb(255, 213, 23);
 }
@@ -195,3 +201,44 @@ footer {
   flex-grow: 1;
 }
 
+.mac-inf-list li {
+  padding: 5px 0;
+}
+
+.mac-icon-list {
+  display: flex;
+  align-items: center;
+}
+
+.mac-icon-list li {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+  background-color: #fff;
+  border-radius: 50%;
+  transition: background-color 300ms ease-in-out;
+}
+
+.mac-icon-list li:last-child {
+  margin-right: 0;
+}
+
+.mac-icon-list i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 26px;
+  color: rgb(235, 27, 27);
+  transition: color 300ms ease-in-out;
+}
+
+.mac-icon-list li:hover {
+  background-color: rgb(235, 27, 27);
+  text-decoration: underline;
+}
+
+.mac-icon-list li:hover i {
+  color: #fff;
+}
