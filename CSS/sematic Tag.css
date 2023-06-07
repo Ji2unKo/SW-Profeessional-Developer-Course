@@ -1,3 +1,7 @@
+h1 {
+  color: rgb(86, 200, 204);
+}
+
 /* 폰트를 두껍게 하려면 700또는 bold */
 .b-weight{
   font-weight: bold;
@@ -19,6 +23,6 @@
 }
 
 .blck{
-  background-color: yellowgreen;
+  background-color: yellow;
 }
  
