@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,29 +9,29 @@
 <body>
   <div class="wrapper">
     <h1 id="hello">안녕하세여</h1>
-    <button id="bth" type = "button">BUTTON</button>
+    <button id="btn" type="button">BUTTON</button>
   </div>
   <script>
-    // document.getElementById('hello').innerHTML = 'Hello!';
-    // document.getElementById('hello').style.color = 'green';
-    // document.getElementById('button').onclick = function(){
-    //   alert("Hello!");
-    // }
     // function change() {
     //   document.getElementById('hello').innerHTML = '안뇽~!';
     //   document.getElementById('hello').style.color = 'blue';
     // }
-    // document.getElementById('bth').addEventListener('click', change)
-    // 콜백함수
+    // document.getElementById('btn').addEventListener('click', change);
+
+    // 콜백 함수
     // 전역 변수 / 지역 변수
-    // 전역 변수 : 다른 함수에서도 변수 사용 o
-    // 지역 변수 : 다른 함수에서 변수 사용 x
-    const hello = document.getElementById('hello'); 
-    const bth = document.getElementById('bth');
-    bth.addEventListener('click', function(){
-    hello.innerHTML = 'ㅎㅎㅎㅎㅎ'
-    hello.style.color = 'red';
+    // 전역 변수 : 다른 함수에서도 변수 사용 O
+    // 지역 변수 : 다른 함수에서 변수 사용 X
+    const hello = document.getElementById('hello');
+    const btn = document.getElementById('btn');
+
+    btn.addEventListener('click', function(){
+      hello.innerHTML = 'ㅎㅎㅎㅎㅎ';
+      hello.style.color = 'red';
     })
+
+    // document.getElementById('hello').innerHTML = 'Hello!';
+    // document.getElementById('hello').style.color = 'green';
   </script>
 </body>
 </html>
