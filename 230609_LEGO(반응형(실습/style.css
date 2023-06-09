@@ -1,0 +1,131 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Bebas Neue', sans-serif;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+.visually-hidden {
+  display: none;
+}
+
+.lg-only{
+  display: flex;
+}
+
+
+nav {
+  align-items: center;
+  width: 100%;
+  margin: 0 auto;
+  padding: 10px 0;
+  background-color: rgb(255, 204, 0);
+}
+
+.logo img {
+ width: 100px;
+}
+
+nav div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin: 0 auto;
+  padding: 10px 0;
+  font-size: 30px;
+}
+
+.gnb-icon-btn i:first-child {
+  color: rgb(222, 0, 0);
+}
+
+.gnb-icon {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 50%;
+  padding: 20px;
+}
+
+nav li {
+  display: flex;
+  justify-content: center;
+}
+h1 {
+ text-align: center;
+}
+
+.lnb-wrapper {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.lnb-wrapper img {
+  width: 100%;
+}
+
+.lnb-list {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  padding: 10px 10px;
+}
+
+.lnb-item a {
+  padding: 10px;
+  color: black;
+  font-weight: 700;
+}
+
+.background {
+  height: 400px;
+  background-image: url('./images/lego.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+@media screen and (max-width : 768px)  {
+
+  }
+  
+
+@media screen and (max-width : 1200px) {
+
+  }
+  
+
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 200px;
+  width: 200px;
+  height: 100vh;
+  padding: 32px 20px;
+  background-color: #fff;
+  transform: translateX(-200px);
+  transition: transfrom 300ms ease-in-out;
+}
+
+.sidebar.is-anctive {
+  transform: translateX(0);
+}
+
+.side-menu-ite a {
+  display: flex;
+  padding: 10px;
+  color: #222;
+}
