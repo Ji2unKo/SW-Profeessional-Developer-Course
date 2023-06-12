@@ -1,0 +1,100 @@
+.apple::after {
+ content: "다람쥐";
+ color: red;
+}
+
+.apple::before {
+  content: "ㅎㅎㅎ";
+  display: block;
+  background-color: red;
+  width: 200px;
+  height: 50px;
+}
+
+#bill {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+#bill td,
+#bill th {
+  border: 1px solid black;
+  padding: 0.3em 1em;
+}
+
+#bill th {
+  background-color: #eee;
+}
+
+/* 아이디가 bill인 녀석의 자손 중에서 각각 둘째인 녀석들의 뒷부분 */
+#bill td:nth-of-type(2)::after {
+  content: "원";
+  margin-left: 0.3em;
+  font-size: 0.8em;
+  color: #555;
+}
+
+#modal {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.3);
+  z-index: 9999;
+}
+
+#modalwin {
+  background-color: #fff;
+  /* calc() : 계산하다  100% -20px
+     주의할점 : - (연산자) 앞, 뒤로 반드시 띄어쓰기*/
+  width: calc(100% - 20px);
+  max-width: 450px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  border-radius: 4px;
+  /* x, y 블러값 색깔 */
+  box-shadow: 3px 8px 12px rgba(0,0,0,0.1);
+}
+/*absolute 가운데로 보내기 꼭 익히기!!*****
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%); */
+
+#modalcl {
+  display: block;
+  width: 30px;
+  height: 30px;
+  background-color: transparent;
+  border: none;
+  /* 마우스커버 손가락 모양 표시 */
+  cursor: pointer;
+  position: relative;
+}
+
+#modalcl::before,
+#modalcl::after {
+  content: "";
+  display: block;
+  width: 35px;
+  height: 2px;
+  background-color: red;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+}
+#modalcl::before {
+  /* rotate 돌기 */
+  transform: translate(-50%,-50%) rotate(45deg);
+}
+
+#modalcl::after {
+  /* rotate 돌기 */
+  transform: translate(-50%,-50%) rotate(-45deg);
+}
+
+
+
