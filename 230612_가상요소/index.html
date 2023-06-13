@@ -10,6 +10,13 @@
     <link rel="stylesheet" href="./css/style.css">
   </head>
   <body>
+
+    <div id="box1">
+      Hello world! Hello world! Hello world!
+    </div>
+
+
+
     <p class="apple">안녕하세요.</p>
     <p class="apple">반갑습니다.</p>
     <p class="apple">Hello world!.</p>
@@ -39,6 +46,19 @@
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
       </div>
     </div>
+    <script>
+      // 목표 : X자 버튼을 눌렀을떄 모달이 사라졌으면 좋겠다.
+      // 1.#modalcl 이 클릭 당했을 때 
+      // 2.#modal 의 style 중 display라는 스타일의 갓을 none 으로 바꾼다.
+      
+      document.getElementById("modalcl").onclick = function(){
+        document.getElementById("modal").style.display = "none";
+      }
 
+      // $("#modalcl").click(function(){
+      //   $("modalcl").hide();
+      // });
+
+    </script>
   </body>
-</html>
+</html> 
