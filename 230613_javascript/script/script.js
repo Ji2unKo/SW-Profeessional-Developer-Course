@@ -171,7 +171,7 @@
 //#num인 박스에 그 숫자를 입력
 
 // var count = 0;
-// document.getElementById("bth").onclick = function(){
+// document.getElementById("btn").onclick = function(){
 //   count++;
 //   document.getElementById("num").innerHTML = count;
 // }
