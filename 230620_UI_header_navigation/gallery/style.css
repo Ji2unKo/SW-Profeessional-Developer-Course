@@ -13,7 +13,7 @@ html,body {
   display: flex;
 }
 
-.images-item {
+.image-item {
   /* 100% 4개로 나눴을때 25 % */
   /* width: 25%; */
   width: calc(100%/4);
@@ -22,11 +22,11 @@ html,body {
   overflow: hidden;
 }
 
-.images-item.active {
+.image-item.active {
   width: 80%;
 }
 
-.images-item img {
+.image-item img {
   width: 100%;
   max-width: 100%;
   object-fit: cover;
