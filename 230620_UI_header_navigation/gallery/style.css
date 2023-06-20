@@ -1,0 +1,33 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,body {
+  width: 100%;
+  height: 100%;
+}
+
+.images {
+  display: flex;
+}
+
+.images-item {
+  /* 100% 4개로 나눴을때 25 % */
+  /* width: 25%; */
+  width: calc(100%/4);
+  height: 100vh;
+  /* 사진 크기 / 넘어가는 걸 막아줌 */
+  overflow: hidden;
+}
+
+.images-item.active {
+  width: 80%;
+}
+
+.images-item img {
+  width: 100%;
+  max-width: 100%;
+  object-fit: cover;
+}
