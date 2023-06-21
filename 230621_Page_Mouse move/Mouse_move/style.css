@@ -1,7 +1,7 @@
 /* 전역변수 -전체 영역에서 쓰이는 변수다 */
-/* :root {
+:root {
   --size: 36px;
-} */
+}
 
 * {
   margin: 0;
@@ -21,10 +21,7 @@ html,body {
 }
 
 #pointer {
-  --size: 36px;
-  /* --shadow : 0 30px 30px black;
-  box-shadow: var(--shadow);
-  background-color: #fff; */
+  /* --size: 36px; */
   position: fixed;
   top: 0;
   left: 0;
@@ -37,6 +34,15 @@ html,body {
 
 #pointer::after {
   --size: 5px;
+  /* 가운데 정렬하는 방법
+  absolute, fixed와 같은 고정된 위치를 가질 때 사용하는 방법
+  top, left | bottom, right - 각각 50%
+  x = 좌우로 이동하는 값, y = 상하로 이동하는 값
+  transfome: translate(x,y)
+  ----------------------------------
+  --shadow : 0 30px 30px black;
+  box-shadow: var(--shadow);
+  background-color: #fff; */
   position: absolute;
   top: 50%;
   left: 50%;
@@ -45,6 +51,7 @@ html,body {
   height: var(--size);
   border-radius: var(--size);
   background-color: #fff;
+  /* alsolute일 경우 content 확인 */
   content: '';
 }
 
@@ -63,5 +70,12 @@ html,body {
 }
 
 @keyframes bubble {
-
+  0%{
+    opacity: 0;
+    transform: scale(0);
+  }
+  100%{
+    opacity: 1;
+    transform: scale(1);
+  }
 }
