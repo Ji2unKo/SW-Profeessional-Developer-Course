@@ -21,7 +21,7 @@ html,body {
 }
 
 #pointer {
-  --size: 50px;
+  --size: 36px;
   /* --shadow : 0 30px 30px black;
   box-shadow: var(--shadow);
   background-color: #fff; */
@@ -32,4 +32,36 @@ html,body {
   height: var(--size);
   border-radius: var(--size);
   border: 1px solid #fff;
+  cursor: none;
+}
+
+#pointer::after {
+  --size: 5px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: var(--size);
+  height: var(--size);
+  border-radius: var(--size);
+  background-color: #fff;
+  content: '';
+}
+
+#bubble {
+  display: block;
+  width: var(--size);
+  height: var(--size);
+  border-radius: var(--size);
+  background-color: #fff;
+  opacity: 0;
+}
+
+#pointer:active #bubble {
+  opacity: 1;
+  animation: bubble 1s ease-in-out forwards;
+}
+
+@keyframes bubble {
+
 }
