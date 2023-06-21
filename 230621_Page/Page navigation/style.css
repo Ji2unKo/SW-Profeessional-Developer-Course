@@ -1,0 +1,87 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,body {
+  width: 100%;
+  height: 100%;
+}
+
+/* app */
+#app {
+  width: 100vw;
+  height: 100vh;
+  background-color: aliceblue;
+}
+
+.container {
+}
+
+.container .page {
+  position: fixed;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  /* background-color: red; */
+  background-size: 100%;
+  background-position: center center;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.container .page:nth-child(1){
+  background-image: url(../images/펭귄.webp);
+}
+.container .page:nth-child(2){
+  background-image: url(../images/펭귄2.jpeg);
+}
+.container .page:nth-child(3){
+  background-image: url(../images/펭귄3.webp);
+}
+.container .page:nth-child(4){
+  background-image: url(../images/펭귄4.jpg);
+}
+
+.container .page.active {
+  visibility: visible;
+  opacity: 1;
+}
+ 
+
+/* navigation */
+.nav {
+  position: fixed;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  /* 화면 정중아에 정렬 */
+  /* top: 50%;
+  left: 50%;
+  transform: translate(-50%, 50%); */
+  background-color: #fff;
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+  display: flex;
+  overflow: hidden;
+}
+
+.nav .button {
+  border: 0;
+  padding: 1rem;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.nav .button:active {
+  background-color: #16165f;
+  color: #fff;
+}
+
+.nav .button.active {
+  background-color: blue;
+  color: #fff;
+}
+/* a:hover, a:active, a:link, a:visited */
+
