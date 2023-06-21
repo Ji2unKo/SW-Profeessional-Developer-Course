@@ -29,6 +29,9 @@ html,body {
   background-position: center center;
   opacity: 0;
   visibility: hidden;
+  color: #fff;
+  /* 하단으로 정렬 */
+  align-items: flex-end;
 }
 
 .container .page:nth-child(1){
@@ -47,8 +50,36 @@ html,body {
 .container .page.active {
   visibility: visible;
   opacity: 1;
-}
+} 
  
+/* content */
+/* 띄어쓰기 주의 !
+ .container.active 를 넣었을경우 한class 로 이해 
+.container .active 띄어쓰면 .container안에 .active 있다. */
+.container .page .content {
+  display: flex;
+  flex-direction: column;
+  /* 3개만 쓸 경우 상, 좌우, 하 */
+  padding: 2rem 2rem 5rem;
+  opacity: 0;
+  z-index: 1;
+}
+
+.container .page::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: '';
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, transparent,#000);
+}
+
+/* keyframes */
+.container .page.active .content {
+  opacity: 0;
+  animation: slideUP 1s linear 0.5s forwards;
+}
 
 /* navigation */
 .nav {
@@ -85,3 +116,17 @@ html,body {
 }
 /* a:hover, a:active, a:link, a:visited */
 
+
+
+@keyframes slideUP {
+  /* from{}
+  to{} */
+  0%{
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  100%{
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
