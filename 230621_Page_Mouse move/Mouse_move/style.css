@@ -1,0 +1,35 @@
+/* 전역변수 -전체 영역에서 쓰이는 변수다 */
+/* :root {
+  --size: 36px;
+} */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,body {
+  width: 100%;
+  height: 100%;
+}
+
+#app {
+  width: 100vw;
+  height: 100vh;
+  background-color: hsl(200,50%,30%);
+}
+
+#pointer {
+  --size: 50px;
+  /* --shadow : 0 30px 30px black;
+  box-shadow: var(--shadow);
+  background-color: #fff; */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: var(--size);
+  height: var(--size);
+  border-radius: var(--size);
+  border: 1px solid #fff;
+}
