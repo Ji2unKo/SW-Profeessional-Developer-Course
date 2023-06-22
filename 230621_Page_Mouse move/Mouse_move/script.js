@@ -36,9 +36,12 @@ window.addEventListener('click',(event) => {
   posX = event.clientX
   posY = event.clientY
   bubble.classList.add('bubble')
+  bubble.classList.add('active')
   app.appendChild(bubble)
 
-  bubble.style.top = posY+'px'
-  bubble.style.left = posX+'px'
+  bubble.style.top = posY - (bubble.offsetHeight / 2) + 'px'
+  bubble.style.left = posX - (bubble.offsetWidth / 2) + 'px'
+
+  setTimeout(() => {},1000)
   console.log(bubble)
 })
