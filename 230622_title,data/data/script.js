@@ -36,3 +36,5 @@ interval = setInterval(() => {
   }
 }, 25) // 0.25초마다 반복한다.
 })
+
+// console.log(dataNumber)
