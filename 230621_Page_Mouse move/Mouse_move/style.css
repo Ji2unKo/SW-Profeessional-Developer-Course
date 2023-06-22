@@ -70,15 +70,20 @@ html,body{
 }
 #app .bubble.active{
   opacity:1;
-  animation: bubble 1s ease-in-out forwards;
+  animation: bubble 300ms ease-in-out forwards;
 }
 @keyframes bubble {
  0%{
   opacity:0;
   transform: scale(0);
  } 
+
+ 50%{
+  opacity: 1;
+ }
+
  100%{
-  opacity:1;
-  transform: scale(1.2);
+  opacity:0;
+  transform: scale(3);
  }
 }

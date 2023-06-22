@@ -42,6 +42,8 @@ window.addEventListener('click',(event) => {
   bubble.style.top = posY - (bubble.offsetHeight / 2) + 'px'
   bubble.style.left = posX - (bubble.offsetWidth / 2) + 'px'
 
-  setTimeout(() => {},1000)
+  setTimeout(() => {
+    bubble.remove()
+  },1000)
   console.log(bubble)
 })
