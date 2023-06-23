@@ -115,7 +115,16 @@ html,body {
   /* background-position: center center; */
 }
 
+#list .list-item.checked {
+  text-decoration: line-through;
+  opacity: 0.4;
+  cursor: pointer;
+}
+
 #list .list-item .list-delete {
+  position: absolute;
+  top: 0;
+  right: 0;
   display: flex;
   width: 36px;
   height: 36px;
