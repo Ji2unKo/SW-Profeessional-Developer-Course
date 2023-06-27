@@ -9,3 +9,18 @@ html,body {
   height: 100vh;
   background-color: hsl(220, 60%, 15%);
 }
+
+#wrapper {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.snow {
+  display: flex;
+  width: 3px;
+  height: 3px;
+  background-color: white;
+  border-radius: 3px;
+}
