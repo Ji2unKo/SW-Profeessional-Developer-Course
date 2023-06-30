@@ -1,0 +1,16 @@
+.button {
+  display: flex;
+  padding: 0.5rem 1rem; /*1rem=16px*/
+  border: 1px solid #000;
+  background-color: transparent;
+}
+
+.button.primary {
+  background-color: blue;
+  color: #fff;
+}
+
+.button.secondary {
+  background-color: pink;
+  color: gray;
+}
