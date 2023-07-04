@@ -1,5 +1,5 @@
-// 변수명이 길더라도 명시적으로 적어주는 게 좋음
-// var, const, let
+//변수명이 길더라도 명시적으로 적어주는 게 좋음
+//var, const, let
 const sidebarMenuButton = document.querySelector('.gnb-icon-button')
 
 const sidebar = document.querySelector('.sidebar')
@@ -27,3 +27,4 @@ function closeSidebar() {
 }
 
 sidebarOverlay.addEventListener('click', closeSidebar)
+
