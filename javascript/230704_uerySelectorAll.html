@@ -14,14 +14,38 @@
     <p class="hello">안녕</p>
   </div>
   <script>
-    // javascript / jQuery HTML안 글자 '안녕' -> 'hello'
-    const hello = document.querySelectorAll('p')
-    console.log(hello)
-    function toggle(){
-      const drawerMenu = this.parentNode;
-      toggle.classList('hello')
-    }
-    toggle
+        // javascript / jQuery HTML안 글자 '안녕' -> 'hello'
+
+    // javascript
+    // var elements = document.querySelectorAll(".hello")
+    // for ( var i=elements.length; i--;){
+    //   elements[i].textContent="hello"
+    // }
+    // 첫번째, 두번째, 세번째 하나씩 바꿀수 있음
+    // document.querySelectorAll(".hello")[0].innerHTML="hello"
+    // document.querySelectorAll(".hello")[1].innerHTML="hello"
+    // document.querySelectorAll(".hello")[2].innerHTML="hello"
+
+    let hello = document.querySelectorAll('.hello') 
+    hello.forEach(function(changeColor){
+      changeColor.style.color = "green";
+    })
+
+    // jQuery
+    // $(document).ready(function(){
+    //   $('.hello').html('hello')
+    // })
+
+    $('.hello').html('jQuery')
+    $(".hello").css("color", "red");
+
+    let names = ['예진', '지은', '한나', '서우']
+    // document.write('예진', '지은', '한나', '서우');
+    console.log(names)
+    names.forEach(function(name){
+      document.write(`<h1>${name}</h1>`);
+      document.write('<h2>' + name + '</h2>');
+    })
   </script>
 </body>
-</html>
+</html
