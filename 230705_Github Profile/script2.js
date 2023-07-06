@@ -6,7 +6,9 @@ let dropdownBtn = document.querySelector('.dropdown-btn');
 let dropdownMenu = document.querySelector('.dropdown-menu');
 console.log(dropdownBtn, dropdownMenu)
 
-dropdownBtn.addEventListener('click', function(){
+dropdownBtn.addEventListener('click', function(e){
+  // a태그 전에 먼저 메뉴나오게 해주라고 하는 이벤트 (e)
+  e.preventDefault();
   dropdownMenu.classList.toggle('active')
 })
 
