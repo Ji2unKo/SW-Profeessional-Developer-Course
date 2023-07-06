@@ -1,53 +1,45 @@
 <!DOCTYPE html>
-<html lang="ㅏㅐ">
+<html lang="ko">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Github Dropdown menu</Dd></title>
-  <link rel="stylesheet" href="./style.css">
+  <title>Github Dropdown menu</title>
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
 </head>
 <body>
   <div class="wrapper">
-    <div class="sidebar-menu">
-      <button class="menu-button" type="button">
-        <img src="./images/132882429.jpg" alt="profile">
-      </button>
-      <div class="menu-content">
-        <ul class="menu-list">
-          <li class="menu-item"><a href="">Signed in <strong>Ji2unKo</strong></a></li>
-        </ul>
-      </div>
-        <div class="menu-content">
-          <ul class="menu-list">
-            <li class="menu-item"><a href="">Your profile</a></li>
-            <li><a href="">Your repositories</a></li>
-            <li><a href="">Your projects</a></li>
-            <li><a href="">Your stars</a></li>
-            <li><a href="">Your gists</a></li>
-            <li><a href="">Your Sponsors</a></li>
-          </ul>
-        </div>
-
-        <div class="menu-content">
-          <ul class="menu-list">
-            <li class="menu-item"><a href="">Upgrade</a></li>
-            <li><a href="">Try Enterprise</a></li>
-            <li><a href="">Help</a></li>
-            <li><a href="">Settings</a></li>
-          </ul>
-        </div>
-        <div class="menu-content">
-          <ul class="menu-list">
-            <li class="menu-item"><a href="">Sing out</a></li>
-          </ul>
-        </div>
+    <button type="button" class="profile-button">
+      <img src="./images/132882429.jpg" alt="프로필 사진">
+    </button>
+    <div class="drawer-menu">
+      <ul class="drawer-menu-list">
+        <li><a href="">Signed in as <strong class="user-name">Ji2unKo</strong></a></li>
+      </ul>
+      <ul class="drawer-menu-list">
+        <li><a href="">Your profile</a></li>
+        <li><a href="">Your repositories</a></li>
+        <li><a href="">Your projects</a></li>
+        <li><a href="">Your stars</a></li>
+        <li><a href="">Your gists</a></li>
+        <li><a href="">Your Sponsors</a></li>
+      </ul>
+      <ul class="drawer-menu-list">
+        <li><a href="">Upgrade</a></li>
+        <li><a href="">Try Enterprise</a></li>
+        <li><a href="">Help</a></li>
+        <li><a href="">Settings</a></li>
+      </ul>
+      <ul class="drawer-menu-list">
+        <li><a href="">Sign out</a></li>
+      </ul>
     </div>
   </div>
-  <div class="overlay"></div>
+
+
   <script src="./script.js"></script>
 </body>
 </html>
