@@ -20,10 +20,14 @@ body {
 
 .profile-button{
   position: absolute;
+  /* border: none; 을 추가해야 사라짐!! */
+  border: none;
   top: 30px;
   right: 80px;
   width: 50px;
   height: 32px;
+  /* 마우스 커버 손가락 모양 */
+  cursor: pointer;
   background-color: transparent;
   transition: color 200ms ease-in-out, background-color 200ms ease-in-out;
 }
