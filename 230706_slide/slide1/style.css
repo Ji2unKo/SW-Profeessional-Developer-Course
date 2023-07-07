@@ -8,16 +8,15 @@ li {
 }
 
 .slide-wrapper {
-  width: 100vw;
   overflow: hidden;
 }
 
 .slide-list {
   display: flex;
-  /* viewport width *3 (이미지 수) */
+  /* viewport width * 3(이미지 수) */
   width: 300vw;
   height: 600px;
-  /* transform: translateX(-100vw); */
+  /* transform: translateX(-200vw); */
   transition: transform 1s;
 }
 
