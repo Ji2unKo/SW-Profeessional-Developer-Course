@@ -1,18 +1,22 @@
-let btn1 = document.querySelector('.btn1')
-let btn2 = document.querySelector('.btn2')
-let btn3 = document.querySelector('.btn3')
+let slideList = document.querySelector('.slide-list');
+let slideItems = document.querySelectorAll('.slide-list li');
 
-let slideList = document.querySelector('.slide-list')
-console.log(slideList)
+let prevBtn = document.querySelector('.prev');
+let nextBtn = document.querySelector('.next');
 
-btn1.addEventListener('click', function(){
-  slideList.style.transform = 'translateX(0)'
+let currentSlide = 0;
+
+nextBtn.addEventListener('click', function(){
+  // slideItems 배열 length의 -1보다 값이 작을 때
+  if(currentSlide < slideItems.length - 1){
+    currentSlide++;
+    slideList.style.transform = `translateX(-${currentSlide * 100}vw)`
+  }
 })
 
-btn2.addEventListener('click', function(){
-  slideList.style.transform = 'translateX(-100vw)'
-})
-
-btn3.addEventListener('click', function(){
-  slideList.style.transform = 'translateX(-200vw)'
+prevBtn.addEventListener('click', function(){
+  if(currentSlide > 0){
+    currentSlide--;
+    slideList.style.transform = 'translateX(-' + currentSlide * 100 + 'vw)'
+  }
 })
