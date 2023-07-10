@@ -1,0 +1,43 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  width: 100%;
+  height: 100%;
+  background-color: skyblue;
+}
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+.visually-hidden {
+  display: none;
+}
+
+.gnb {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.gnb li {
+  margin: 0 auto;
+  width: 80px;
+  height: 20px;
+  padding: 5px 0;
+  cursor: pointer;
+}
+
+.gnb li a { 
+  color: #fff;
+  text-align: center;
+}
+
+
