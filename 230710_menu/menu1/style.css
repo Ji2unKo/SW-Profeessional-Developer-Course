@@ -44,7 +44,14 @@ a {
 .sub {
   position: absolute;
   width: 100%;
-  display: none;
+  /* display: none; */
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 500ms ease-in-out;
+}
+
+.sub.active {
+  max-height: 270px;
 }
 
 .sub li a {
