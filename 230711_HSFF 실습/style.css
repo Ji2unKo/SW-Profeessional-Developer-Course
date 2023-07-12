@@ -4,6 +4,11 @@
   box-sizing: border-box;
 }
 
+html,body {
+  width: 100%;
+  height: 100%;
+}
+
 li {
   list-style: none;
 }
@@ -17,11 +22,25 @@ a {
   display: none;
 }
 
+.navbar {
+  width: 300vw;
+  display: flex;
+  margin-top: 30px;
+}
+
 .navbar-logo {
   font-size: 24px;
 }
 
-.navbar-menu {
+.navbar-gnb {
+  position: absolute;
+  top: 0;
+  right: 30px;
+  font-size: 10px;
+
+}
+
+.navbar-menu-list{
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -29,4 +48,10 @@ a {
   padding: 8px 12px;
 }
 
+.navbar-menu-item >li {
+  display: none;
+}
 
+.navbar-icon {
+
+}
