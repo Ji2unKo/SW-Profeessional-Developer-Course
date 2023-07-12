@@ -18,6 +18,7 @@ a {
   color: #000;
 }
 
+
 .header-top {
   display: flex;
   justify-content: flex-end;
@@ -41,7 +42,7 @@ nav {
 }
 
 .menu-list {
-  width: 300px;
+  width: 100%px;
   display: flex;
   justify-content: center;
   align-items: center;
