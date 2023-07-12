@@ -44,26 +44,30 @@ nav {
 
 }
 
-.gnb {
+.menu-list {
   width: 300px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.gnb > li {
+.menu-list > li {
   position: relative;
   width: 25%;
   text-align: center;
 }
 
-.gnb > li > a {
+.menu-list > li > a {
   width: 100px;
   display: block;
   padding: 20px 0;
 }
 
-.sub {
+.menu-list > li > a:hover {
+  color: blue;
+}
+
+.menu-item {
   position: absolute;
   width: 100%;
   overflow: hidden;
@@ -71,11 +75,11 @@ nav {
   transition: max-height 500ms ease-in-out;
 }
 
-.sub.active {
+.menu-item.active {
   max-height: 270px;
 }
 
-.sub li a {
+.menu-item li a {
   display: block;
   padding: 16px 0;
 }
@@ -84,4 +88,66 @@ nav {
   position: absolute;
   top: 50px;
   right: 30px;
+}
+
+.slide-list {
+  display: flex;
+  width: 300vw;
+  height: 600px;
+}
+
+.slide-list li {
+  width: 100vw;
+  height: 100%;
+}
+
+.slide-list li img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.btn-group {
+  display: flex;
+  justify-content: center;
+  background-color: #e4e1e1;
+}
+
+.btn-group button {
+  margin-right: 10px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+}
+
+.btn-group button:last-child {
+  margin-right: 0;
+}
+
+footer {
+  background-color: #414244;
+  color: gray;
+}
+
+section {
+  display: flex;
+  justify-content: space-between;
+}
+
+section > ul > li > a {
+  color: gray;
+  font-size: 10px;
+} 
+
+span img {
+  color: gray;
+}
+
+span {
+  display: flex;
+  margin-top: 10px;
+}
+
+span > ul > li {
+  font-size: 10px;
 }
