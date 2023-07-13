@@ -77,10 +77,19 @@ li {
   left: 50%;
   /* 좌표를 가운데 정렬 */
   transform: translateX(-50%);
-  display: none;
+  /* display: none; (jQuery) */
+  /* Vanilla JS ->   max-height: 0;
+  overflow: hidden; 메뉴 가려줘*/
+  max-height: 0;
+  overflow: hidden;
   width: 200px;
   background-color: #fff;
   box-shadow: 0 3px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Vanilla JS 추가 */
+.sub.active {
+  max-height: 265px;
 }
 
 /* 가상요소 네모박스 */
