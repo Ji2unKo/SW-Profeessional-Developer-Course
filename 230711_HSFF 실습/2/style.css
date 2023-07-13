@@ -156,3 +156,88 @@ li {
 .slide-btn li:last-child:after {
   content: none;
 }
+
+footer {
+  margin-top: 60px;
+  color: #aaa;
+}
+
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  background-color: #414244;
+  padding: 0 40px;
+}
+
+.footer-top a {
+  color: #aaa;
+}
+
+.footer-left {
+  display: flex;
+}
+ 
+.footer-left li a {
+  display: block;
+  padding: 20px;
+  font-size: 18px;
+  border: 1px solid #ccc;
+}
+
+.footer-left li:last-child a {
+  border-right: 1px solid #ccc;
+}
+
+.footer-left li:nth-child(2) a {
+  color: #fff;
+  font-weight: 700;
+}
+
+.footer-right {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 360px;
+}
+
+.number {
+  color: #fff;
+  font-size: 20px;
+}
+
+.time {
+  font-size: 14px;
+}
+
+.footer-bottom {
+  padding: 50px 40px;
+  background-color: #2d2d30;
+}
+
+.footer-bottom img {
+  opacity: 0.5;
+}
+
+.footer-bottom ul {
+  display: flex;
+  margin-top: 30px;
+}
+
+.footer-bottom ul li::before {
+  content: '';
+  display: inline-block;
+  width: 1px;
+  height: 15px;
+  background-color: #666;
+  margin: 0 16px;
+  /* 가상요소 안에 기울기 만들기 (돌리겠다) */
+  transform: rotate(30deg);
+}
+
+.footer-bottom ul li:first-child::before {
+  content: none;
+}
+
+.footer-bottom p {
+  margin-top: 10px;
+}
