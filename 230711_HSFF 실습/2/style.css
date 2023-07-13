@@ -1,0 +1,158 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+li {
+  list-style: none;
+}
+
+.lg-hidden {
+  display: none;
+}
+
+.global-header {
+  position: fixed;
+  top: 0;
+  /* 다른 메뉴보다 앞에 나타나게 고정 */
+  z-index: 100;
+  width: 100%;
+  /* 투명 하게 하는 rgba */
+  background-color: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.3);
+}
+
+.gnb-log {
+  display: flex;
+  justify-content: flex-end;
+  padding: 30px 50px;
+}
+
+.gnb-log li a {
+  margin-right: 16px;
+  font-size: 15px;
+}
+
+.gnb-log li:last-child a {
+  margin-right: 0;
+}
+
+.gnb-log li a i {
+  margin-right: 4px;
+}
+
+.gnb-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40px;
+}
+.gnb-main-list {
+  display: flex;
+}
+ 
+.gnb-main-item {
+  position: relative;
+}
+
+.gnb-main-item a:hover,
+.gnb-main-item a.active {
+  color: darkblue;
+}
+
+.gnb-main-item a {
+  display: block;
+  text-align: center;
+  padding: 16px;
+}
+
+.sub {
+  position: absolute;
+  left: 50%;
+  /* 좌표를 가운데 정렬 */
+  transform: translateX(-50%);
+  display: none;
+  width: 200px;
+  background-color: #fff;
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* 가상요소 네모박스 */
+.sub::before {
+  content: '';
+  position: absolute;
+  top: -5px;
+  left: 50%;
+  transform: translate(-50%);
+  width: 10px;
+  height: 10px;
+  background-color: #113676;
+}
+
+.slide-wrapper {
+  /* 넘치는거 다 가림 (스크롤 사라짐) */
+  overflow: hidden;
+  position: relative;
+}
+
+.slide-list {
+  display: flex;
+  width: 300vw;
+  height: 600px;
+}
+
+.slide-list li {
+  width: 100vw;
+  height: 100%;
+}
+
+.slide-list li img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.slide-btn {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 25px 0;
+  border-top: 1px solid #ccc;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.slide-btn li {
+  color: #fff;
+  margin-right: 15px;
+  font-size: 15px;
+}
+
+.slide-btn li:last-child {
+  margin-right: 0;
+}
+
+.slide-btn li:hover,
+.slide-btn li.active {
+  color: #FFE111;
+}
+
+.slide-btn li::after {
+  content: '';
+  display: inline-block;
+  width: 2px;
+  height: 14px;
+  background-color: #aaa;
+  margin-left: 20px;
+}
+
+.slide-btn li:last-child:after {
+  content: none;
+}
