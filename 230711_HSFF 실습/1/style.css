@@ -4,87 +4,143 @@
   box-sizing: border-box;
 }
 
-html,body {
-  width: 100%;
-  height: 100%;
+a {
+  text-decoration: none;
+  color: #333;
 }
 
 li {
   list-style: none;
 }
 
-a {
-  text-decoration: none;
-  color: #000;
-}
-
-
-.header-top {
-  display: flex;
-  justify-content: flex-end;
-  font-size: 10px;
-  padding: 8px 12px;
-}
-
-.header-top a i {
-  margin: 10px;
-  color: #414244;
-}
-
-.visually-hidden {
+.lg-hidden {
   display: none;
 }
 
-nav {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-
-.menu-list {
-  width: 100%px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.menu-list > li {
-  position: relative;
-  width: 25%;
-  text-align: center;
-}
-
-.menu-list > li > a {
-  width: 100px;
-  display: block;
-  padding: 20px 0;
-}
-
-.menu-list > li > a:hover {
-  color: blue;
-}
-
-.menu-item {
-  position: absolute;
+.global-header {
+  position: fixed;
+  top: 0;
+  /* 다른 메뉴보다 앞에 나타나게 고정 */
+  z-index: 100;
   width: 100%;
-  overflow: hidden;
-  max-height: 0;
-  transition: max-height 500ms ease-in-out;
+  /* 투명 하게 하는 rgba */
+  background-color: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.3);
 }
 
-.menu-item.active {
-  max-height: 270px;
+.gnb-log {
+  display: flex;
+  justify-content: flex-end;
+  padding: 30px 50px;
 }
 
-.menu-item li a {
+.gnb-log li a {
+  margin-right: 16px;
+  font-size: 15px;
+}
+
+.gnb-log li:last-child a {
+  margin-right: 0;
+}
+
+.gnb-log li a i {
+  margin-right: 4px;
+}
+
+.gnb-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40px;
+}
+.gnb-main-list {
+  display: flex;
+}
+ 
+.gnb-main-item {
+  position: relative;
+}
+
+.gnb-main-item a:hover,
+.gnb-main-item a.on {
+  color: darkblue;
+}
+
+.gnb-main-item a {
   display: block;
-  padding: 16px 0;
+  text-align: center;
+  padding: 16px;
 }
 
-.icon button {
+/* .nemo {
   position: absolute;
-  top: 50px;
-  right: 30px;
+  display: none;
+  top: 47px;
+  left: 50%;
+  transform: translate(-50%);
+  width: 10px;
+  height: 10px;
+  background-color: #113676;
+}
+
+.gnb-main-item:hover .nemo {
+  display: block;
+} */
+
+.square {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  z-index: 10;
+  display: none;
+  background-color: #113676;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.square.is-active {
+  display: inline-block;
+}
+
+
+.sub {
+  position: absolute;
+  left: 50%;
+  /* 좌표를 가운데 정렬 */
+  transform: translateX(-50%);
+  /* display: none; (jQuery) */
+  /* Vanilla JS ->   max-height: 0;
+  overflow: hidden; 메뉴 가려줘*/
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 500ms ease-in-out;
+  width: 200px;
+  background-color: #fff;
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Vanilla JS 추가 */
+.sub.active {
+  max-height: 265px;
+}
+
+/* 가상요소 네모박스 */
+/* .sub::before {
+  content: '';
+  position: absolute;
+  top: -5px;
+  left: 50%;
+  transform: translate(-50%);
+  width: 10px;
+  height: 10px;
+  background-color: #113676;
+} */
+
+.slide-wrapper {
+  /* 넘치는거 다 가림 (스크롤 사라짐) */
+  overflow: hidden;
+  position: relative;
 }
 
 .slide-list {
@@ -104,47 +160,190 @@ nav {
   object-fit: cover;
 }
 
-.btn-group {
+.slide-btn {
+  position: absolute;
+  bottom: 0;
   display: flex;
   justify-content: center;
-  background-color: #e4e1e1;
+  width: 100%;
+  padding: 25px 0;
+  border-top: 1px solid #ccc;
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
-.btn-group button {
-  margin-right: 10px;
-  padding: 10px;
-  border: none;
-  border-radius: 5px;
+.slide-btn li {
+  color: #fff;
+  margin-right: 15px;
+  font-size: 15px;
 }
 
-.btn-group button:last-child {
+.slide-btn li:last-child {
   margin-right: 0;
 }
 
-footer {
-  background-color: #414244;
-  color: gray;
+.slide-btn li:hover,
+.slide-btn li.active {
+  color: #FFE111;
 }
 
-section {
+.slide-btn li::after {
+  content: '';
+  display: inline-block;
+  width: 2px;
+  height: 14px;
+  background-color: #aaa;
+  margin-left: 20px;
+}
+
+.slide-btn li:last-child:after {
+  content: none;
+}
+
+footer {
+  margin-top: 60px;
+  color: #aaa;
+}
+
+.footer-top {
   display: flex;
   justify-content: space-between;
+  background-color: #414244;
+  padding: 0 40px;
 }
 
-section > ul > li > a {
-  color: gray;
-  font-size: 10px;
-} 
-
-span img {
-  color: gray;
+.footer-top a {
+  color: #aaa;
 }
 
-span {
+.footer-left {
   display: flex;
+}
+ 
+.footer-left li a {
+  display: block;
+  padding: 20px;
+  font-size: 18px;
+  border: 1px solid #ccc;
+}
+
+.footer-left li:last-child a {
+  border-right: 1px solid #ccc;
+}
+
+.footer-left li:nth-child(2) a {
+  color: #fff;
+  font-weight: 700;
+}
+
+.footer-right {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 360px;
+}
+
+.number {
+  color: #fff;
+  font-size: 20px;
+}
+
+.time {
+  font-size: 14px;
+}
+
+.footer-bottom {
+  padding: 50px 40px;
+  background-color: #2d2d30;
+}
+
+.footer-bottom img {
+  opacity: 0.5;
+}
+
+.footer-bottom ul {
+  display: flex;
+  margin-top: 30px;
+}
+
+.footer-bottom ul li::before {
+  content: '';
+  display: inline-block;
+  width: 1px;
+  height: 15px;
+  background-color: #666;
+  margin: 0 16px;
+  /* 가상요소 안에 기울기 만들기 (돌리겠다) */
+  transform: rotate(30deg);
+}
+
+.footer-bottom ul li:first-child::before {
+  content: none;
+}
+
+.footer-bottom p {
   margin-top: 10px;
 }
 
-span > ul > li {
-  font-size: 10px;
+@media screen and (max-width : 1200px) {
+  .lg-hidden {
+  display: block;
+ }
+
+ .lg-only {
+  display: none;
+ }
+
+ .gnb-log {
+  padding: 20px 30px;
+ }
+
+ .gnb-main {
+  padding: 10px 30px;
+ }
+
+ .gnb-open-btn {
+  border: none;
+ }
+
+ .sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 200;
+  width: 200px;
+  height: 100vh;
+  text-align: center;
+  padding: 20px 30px;
+  box-shadow: 5px 0 5px rgba(0, 0, 0, 0.2);
+  background-color: #fff;
+  /* 화면상에서 숨기고 나중에 버튼 클릭시 나오게 width값 -숫자  */
+  transform: translateX(-200px);
+  transition: transform 500ms ease-in-out;
+ }
+
+ .sidebar.active {
+  transform: translateX(0);
+ }
+ 
+ .sidebar-btn {
+  float: right;
+  border: none;
+  font-size: 18px;
+  background-color: transparent;
+ }
+
+ .sidebar-list {
+  clear: right;
+  margin-top: 20px;
+ }
+
+ .sidebar-item a {
+  display: block;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+ }
+
+ .sidebar-item:first-child a {
+  border-top: 1px solid #ccc;
+ }
 }
