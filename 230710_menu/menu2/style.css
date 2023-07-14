@@ -1,0 +1,32 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+.navbar {
+  width: 100%;
+}
+
+.navbar-list {
+  display: flex;
+  justify-content: flex-end;
+  padding: 20px 0;
+}
+
+.navbar-list a {
+  padding: 10px;
+}
+
+.navbar-item {
+  display: none;
+}
