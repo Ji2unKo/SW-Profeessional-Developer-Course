@@ -21,12 +21,13 @@ gnbItems.forEach(function(item){
     subMenu.classList.add('active');
     // gnb-main-item a 태그에 on class 추가시 메인메뉴 바뀐 컬러 유지 (hover)
     this.querySelector('a').classList.add('on');
-
+    this.querySelector('span').classList.add('is-active')
   })
 
   item.addEventListener('mouseleave', function(){
     // sub 메뉴를 보이지 않게 max-heigt : 0
     subMenu.classList.remove('active');
     this.querySelector('a').classList.remove('on');
+    this.querySelector('span').classList.remove('is-active')
   })
 })
