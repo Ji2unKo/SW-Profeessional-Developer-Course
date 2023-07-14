@@ -72,6 +72,38 @@ li {
   padding: 16px;
 }
 
+/* .nemo {
+  position: absolute;
+  display: none;
+  top: 47px;
+  left: 50%;
+  transform: translate(-50%);
+  width: 10px;
+  height: 10px;
+  background-color: #113676;
+}
+
+.gnb-main-item:hover .nemo {
+  display: block;
+} */
+
+.square {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  z-index: 10;
+  display: none;
+  background-color: #113676;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.square.is-active {
+  display: inline-block;
+}
+
+
 .sub {
   position: absolute;
   left: 50%;
@@ -82,6 +114,7 @@ li {
   overflow: hidden; 메뉴 가려줘*/
   max-height: 0;
   overflow: hidden;
+  transition: max-height 500ms ease-in-out;
   width: 200px;
   background-color: #fff;
   box-shadow: 0 3px 15px rgba(0, 0, 0, 0.3);
@@ -93,7 +126,7 @@ li {
 }
 
 /* 가상요소 네모박스 */
-.sub::before {
+/* .sub::before {
   content: '';
   position: absolute;
   top: -5px;
@@ -102,7 +135,7 @@ li {
   width: 10px;
   height: 10px;
   background-color: #113676;
-}
+} */
 
 .slide-wrapper {
   /* 넘치는거 다 가림 (스크롤 사라짐) */
