@@ -42,6 +42,14 @@ let rgbBgnChange = setInterval(function(){
   let r = rand(0, 255);
   let g = rand(0, 255);
   let b = rand(0, 255);
-  console.log(r, g, b)
+  // console.log(r, g, b)
   document.querySelector('.count').style.backgroundColor = 'rgb(' + r +',' + g + ',' + b + ')'
+}, 1000)
+
+let num = 1
+
+setInterval(function(){
+  console.log(num);
+  num++;
+  document.querySelector('.count').textContent=`${num}초마다배경색바꾸기`
 }, 1000)
