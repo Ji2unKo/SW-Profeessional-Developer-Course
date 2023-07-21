@@ -1,85 +1,84 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
-li {
-  list-style: none;
-}
-
-.wrapper {
-  position: relative;
-}
-
-.slide-wrapper {
-  overflow: hidden;
+button {
+  border: none;
+  background-color: transparent;
 }
 
 .slide-list {
-  display: flex;
-  width: 300vw;
+  position: relative;
+  width: 100%;
   height: 100vh;
+  /* 화면 이상 넘치는것은 가리겠다 */
+  overflow: hidden;
 }
 
-.slide-list li {
-  position: relative;
-  width: 100vw;
+
+.slide-item {
+  width: 100%;
   height: 100%;
 }
 
-.slide-list li img {
+.slide-item img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-.slide-list li p {
+.slide-item p {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  z-index: 9999;
-  font-weight: 700;
   color: #fff;
-  font-size: 30px;
+  font-size: 3.2em;
+  font-weight: 700;
   text-align: center;
+  opacity: 0;
 }
 
 .btn {
   position: absolute;
-  bottom: 25px;
-  left: 50%;
-}
-
-.btn button {
-  width: 15px;
-  height: 15px;
-  margin-right: 5px;
-  border: 1px solid #fff;
-  border-radius: 50%;
-  background-color: transparent;
-  cursor: pointer;
-  transition: all 300ms ease-in-out;
-}
-
-.btn button:hover {
-  background-color: #fff;
-}
-
-.btn-group button {
-  position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  width: 40px;
-  height: 40px;
-  border: none;
-  background-color: transparent;
+  color: #fff;
+  font-size: 48px;
 }
 
-.prev {
-  left: 30px;
+#prev {
+  left: 80px;
 }
 
-.next {
-  right: 30px;
+#next {
+  right: 80px;
+}
+
+#dots {
+  position: absolute;
+  left: 50%;
+  bottom: 100px;
+  transform: translateX(-50%);
+  display: flex;
+  width: 100px;
+  height: 30px;
+}
+
+#dots div {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: 1px solid white;
+  margin-right: 8px;
+}
+
+#dots div:last-child {
+  margin-right: 0;
+}
+
+#dots div.is-active {
+  background-color: #fff;
 }
