@@ -15,6 +15,7 @@ button {
   height: 100vh;
   /* 화면 이상 넘치는것은 가리겠다 */
   overflow: hidden;
+  background-color: #000;
 }
 
 
