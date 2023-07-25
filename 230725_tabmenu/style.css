@@ -21,6 +21,7 @@ li {
   padding: 10px 20px;
   color: #888;
   margin-bottom: -1px;
+  cursor: pointer;
 }
 
 .tab-item.blue {
