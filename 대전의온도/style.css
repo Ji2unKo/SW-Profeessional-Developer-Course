@@ -18,6 +18,10 @@ button {
   background-color: transparent;
 }
 
+.wrapper {
+  position: relative;
+}
+
 header nav {
   display: flex;
   justify-content: space-between;
@@ -41,6 +45,10 @@ header nav {
 }
 
 .gnb-search { 
+  position: fixed;
+  left: 50%;
+  transform: translate(-50%);
+  z-index: 999;
   display: block;
   width: 500px;  
 }
@@ -63,6 +71,7 @@ header nav {
 }
 
 .gnb-item i {
+  font-size: 20px;
   margin-left: 10px;
   color: pink;
 }
@@ -103,7 +112,7 @@ header nav {
   opacity: 0;
 }
 
-.btn {
+.slide-btn {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -111,15 +120,15 @@ header nav {
   font-size: 48px;
 }
 
-#prev {
+#slide-prev {
   left: 80px;
 }
 
-#next {
+#slide-next {
   right: 80px;
 }
 
-#dots {
+#slide-dots {
   position: absolute;
   left: 50%;
   bottom: 100px;
@@ -129,7 +138,7 @@ header nav {
   height: 30px;
 }
 
-#dots div {
+#slide-dots div {
   width: 18px;
   height: 18px;
   border-radius: 50%;

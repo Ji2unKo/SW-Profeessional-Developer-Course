@@ -39,5 +39,5 @@ function tabOpen(){
 
 // 이벤트리스너 1개
 document.querySelector('.tab-list').addEventListener('click', function(){
-
+  // e.target 클릭된 요소가 버튼 (tab-item) 0이라면
 })

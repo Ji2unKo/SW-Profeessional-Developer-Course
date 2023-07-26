@@ -1,8 +1,11 @@
+console.log(123)
+
+
 let cur = 0;
 let len = $('.slide-item').length;
 
 for(i = 0; i < len; i++){
-  $('#dots').append('<div></div>');
+  $('#slide-dots').append('<div></div>');
 }
 
 function sliding(dir){
@@ -12,7 +15,7 @@ function sliding(dir){
   }else if(cur < 0){
     cur = len - 1;
   }
-
+ 
   $('.slide-item').eq(cur).siblings('.slide-item').stop().fadeOut();
 
   $('.slide-item').eq(cur).stop().fadeIn(function(){
@@ -26,18 +29,18 @@ function sliding(dir){
     }, 600)
   });
 
-  $('#dots div').removeClass('is-active');
-  $('#dots div').eq(cur).addClass('is-active');
+  $('#slide-dots div').removeClass('is-active');
+  $('#slide-dots div').eq(cur).addClass('is-active');
 }
 
 sliding(0)
 
-$('#prev').click(function(){sliding(-1)});
-$('#next').click(function(){sliding(1)});
+$('#slide-prev').click(function(){sliding(-1)});
+$('#slide-next').click(function(){sliding(1)});
 
 let auto = setInterval(sliding, 5000, 1);
 
-$('#dots div').click(function(){
+$('#slide-dots div').click(function(){
   cur = 0;
   let num = $(this).index()
   sliding(num);
