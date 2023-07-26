@@ -1,0 +1,58 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none; /*focus 했을때 테두리 나오게 */
+}
+
+body{
+  font-size:14px;
+  background-color: #f5f6f7;
+  line-height: 1.5em;
+  color : #222;
+  margin: 0;
+}
+
+li {
+  list-style: none;
+}
+
+a{
+  text-decoration: none;
+  color: #222;
+}
+
+b {
+  font-weight: 700;
+  margin: 20px 5px;
+}
+
+
+span {
+  color: rgb(76, 240, 43);
+  font-weight: 700;
+}
+
+.wrapper {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.join img {
+  width: 200px;
+  height: 50px;
+}
+
+.join-name {
+  width: 400px;
+  margin: 0 auto;
+}
+
+
+.join-box2 {
+  border: 1px solid #ddd;
+  background-color: #fff;
+}
+
