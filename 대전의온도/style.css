@@ -53,12 +53,22 @@ header nav {
 }
 
 .gnb-list {
-  padding: 10px;
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.gnb-list li {
+  padding: 20px;
 }
 
 .gnb-item i {
   margin-left: 10px;
   color: pink;
+}
+
+.gnb-item i:last-child {
+  margin-left: 0;
 }
 
 
