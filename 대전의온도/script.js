@@ -16,6 +16,7 @@ document.querySelector('.overlay').addEventListener('click', function(e){
   }
 })
 
+
 //main 
 
 let cur = 0;
