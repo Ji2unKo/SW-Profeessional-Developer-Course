@@ -1,6 +1,3 @@
-console.log(123)
-
-
 let cur = 0;
 let len = $('.slide-item').length;
 
@@ -45,3 +42,4 @@ $('#slide-dots div').click(function(){
   let num = $(this).index()
   sliding(num);
 })
+

@@ -18,6 +18,10 @@ button {
   background-color: transparent;
 }
 
+.visually-hidden {
+  display: none;
+}
+
 .wrapper {
   position: relative;
 }
@@ -55,10 +59,57 @@ header nav {
 
 .gnb-search-btn {
   border: none;
+  border-radius: 10px;
   background-color: #fff;
   width: 50px;
   color: pink;
 }
+
+.overlay {
+  position: fixed;
+  top: 20px;
+  left: 100vw;
+  width: 100%;
+  height: 100vh;
+  visibility: hidden;
+  opacity: 0;
+  padding: 30px;
+  background-color: rgba(0, 0, 0, .5);
+  transition: all 500ms ease-in-out;
+  z-index: 999;
+}
+
+.overlay.is-open {
+  left: 0;
+  visibility: visible;
+  opacity: 1;
+}
+
+.login-box {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%);
+  width: 500px;
+  padding: 50px;
+  border-radius: 5px;
+  background-color: pink;
+}
+
+.login-box img {
+  width: 300px;
+}
+
+.overlay.is-open {
+  visibility: visible;
+  opacity: 1;
+}
+
+.open-btn {
+  color: pink;
+  margin-right: 50px;
+}
+
 
 .gnb-list {
   display: flex;
@@ -72,13 +123,16 @@ header nav {
 
 .gnb-item i {
   font-size: 20px;
+  padding-right: 20px;
   margin-left: 10px;
   color: pink;
 }
 
 .gnb-item i:last-child {
   margin-left: 0;
-}
+} 
+
+
 
 
 .slide-list {
