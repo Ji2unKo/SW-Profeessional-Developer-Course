@@ -1,58 +1,127 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  outline: none; /*focus 했을때 테두리 나오게 */
 }
-
-body{
-  font-size:14px;
-  background-color: #f5f6f7;
-  line-height: 1.5em;
-  color : #222;
-  margin: 0;
+a {
+  text-decoration: none;
+  color: #333;
 }
-
 li {
   list-style: none;
 }
-
-a{
-  text-decoration: none;
-  color: #222;
+.global-header {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 768px;
+  margin: 50px auto;
 }
-
-b {
-  font-weight: 700;
-  margin: 20px 5px;
+.logo img {
+  width: 240px;
 }
-
-
-span {
-  color: rgb(76, 240, 43);
-  font-weight: 700;
-}
-
-.wrapper {
+.lang {
   position: absolute;
-  top: 10%;
-  left: 50%;
-  transform: translate(-50%);
+  right: 10px;
 }
-
-.join img {
-  width: 200px;
-  height: 50px;
-}
-
-.join-name {
-  width: 400px;
+.join-form {
+  max-width: 460px;
   margin: 0 auto;
 }
-
-
-.join-box2 {
-  border: 1px solid #ddd;
-  background-color: #fff;
+section label {
+  display: flex;
 }
 
+label input[type='checkbox'] {
+  /* display: none; */
+  display: none;
+}
+
+.checkbox-img {
+  margin-right: 8px;
+}
+
+label p {
+  width: calc(100% - 32px);
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.total .checkbox-img {
+  width: 24px;
+  height: 24px;
+  background-image: url('./images/pc_check_off_24.png');
+}
+
+.total .checkbox-img.checked {
+  background-image: url('./images/pc_check_on_l_24.png');
+}
+
+.agree {
+  margin-top: 40px;
+}
+
+.agree .checkbox-img {
+  width: 20px;
+  height: 20px;
+  background-image: url('./images/pc_chcek_off_s_20.png');
+}
+
+.agree .checkbox-img.checked {
+  background-image: url('./images/pc_chcek_on_s_20.png');
+}
+
+.agree label p {
+  display: flex;
+  align-items: center;
+}
+
+.agree label span {
+  font-size: 14px;
+  font-weight: 400;
+  margin-left: 8px;
+}
+
+.text-primary {
+  color: #08a600;
+}
+
+.text-secondary {
+  color : #8e8e8e;
+}
+
+.terms {
+  height: 130px;
+  overflow-y: scroll;
+  margin-top: 10px;
+  padding: 16px;
+  border: 1px solid #dadada;
+  border-radius: 5px;
+  color: #666;
+  background-color: #fff;
+}
+.req-alert {
+  visibility: hidden;
+  padding: 20px 0;
+  font-size: 14px;
+  color: red;
+}
+
+.btn {
+  width: calc((100% - 8px) / 2);
+  height: 55px;
+  border: none;
+  color: #fff;
+  background-color: #08a600;
+  font-weight: 700;
+  border-radius: 5px;
+}
+
+.group-join {
+  margin-top: 12px;
+}
+
+.group-join a:hover {
+  color: #08a600;
+}
