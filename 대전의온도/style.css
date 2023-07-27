@@ -18,7 +18,7 @@ button {
   background-color: transparent;
 }
 
-.visually-hidden {
+.visually-hidden{
   display: none;
 }
 
@@ -34,6 +34,7 @@ header nav {
   height: 100%;
   padding: 10px;
   font-family: 'Single Day', cursive;
+  background-color: #FAF0D7;
 }
 
 .gnb-logo {
@@ -52,17 +53,16 @@ header nav {
   position: fixed;
   left: 50%;
   transform: translate(-50%);
-  z-index: 999;
   display: block;
   width: 500px;  
 }
 
 .gnb-search-btn {
   border: none;
-  border-radius: 10px;
   background-color: #fff;
   width: 50px;
-  color: pink;
+  color: #FFD9C0;
+  border-radius: 5px;
 }
 
 .overlay {
@@ -110,11 +110,14 @@ header nav {
   margin-right: 50px;
 }
 
+.gnb-list-login {
+  /* display: none; */
+}
 
 .gnb-list {
   display: flex;
   align-items: center;
-  margin-top: 20px;
+  margin-left: 80%;
 }
 
 .gnb-list li {
@@ -122,88 +125,86 @@ header nav {
 }
 
 .gnb-item i {
-  font-size: 20px;
-  padding-right: 20px;
   margin-left: 10px;
+  font-size: 24px;
   color: pink;
 }
-
 .gnb-item i:last-child {
   margin-left: 0;
 } 
-
-
-
+.slide-wrapper {
+  width: 100vw;
+  height: 450px;
+  background-color: #FAF0D7;
+}
 
 .slide-list {
   position: relative;
+  display: flex;
   width: 100%;
-  height: 100vh;
-  overflow: hidden;
-  background-color: #000;
+  height: 100%;
+  object-fit: cover;
 }
 
 .slide-item {
-  width: 100%;
+  width: 100vw;
   height: 100%;
+  position: absolute;
+}
+
+.slide-text {
+  position: absolute;
+  top: 15%;
+  left: 12%;
+}
+
+
+.slide-text-title {
+  width: 250px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  text-align: center;
+  font-size: 20px;
+  border-radius:20px;
+  background-color: #000;
+  color: #fff;
+}
+
+.slide-text-content {
+  font-size: 30px;
+  font-weight: bold;
+  color: #3d3d3d;
 }
 
 .slide-item img {
-  width: 100%;
-  height: 100%;
-  object-fit: fill;
-}
-
-.slide-item p {
+  width: 800px;
+  height: 500px;
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: #fff;
-  font-size: 3.2em;
-  text-align: center;
-  font-weight: 700;
-  opacity: 0;
-}
+  top: 5%;
+  right: 2px;
+  border-radius: 10px;
+} 
 
-.slide-btn {
+.slide-line {
   position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  color: #fff;
-  font-size: 48px;
+  top: 79%;
+  left: 16%;
+  /* width 값 javascript 후 0으로 수정 */
+  width: 200px;
+  height: 5px;
+  background-color: #3d3d3d;
 }
 
-#slide-prev {
-  left: 80px;
-}
-
-#slide-next {
-  right: 80px;
-}
-
-#slide-dots {
+.play-list-btn {
   position: absolute;
-  left: 50%;
-  bottom: 100px;
-  transform: translateX(-50%);
+  top: 77%;
+  right: 55%;
   display: flex;
-  width: 100px;
-  height: 30px;
-}
+  justify-content: space-between;
+  width: 200px;
+  font-size: 20px;
+} 
 
-#slide-dots div {
-  width: 18px;
-  height: 18px;
-  border-radius: 50%;
-  border: 1px solid #fff;
-  margin-right: 8px;
-}
-
-#dots div:last-child {
-  margin-right: 0;
-}
-
-#dots div.is-active {
-  background-color: #fff;
+.play-list i {
+  cursor: pointer;
 }

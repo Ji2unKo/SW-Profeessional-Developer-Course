@@ -1,3 +1,23 @@
+// 헤더부분 로그인
+
+document.querySelector('.open-btn').addEventListener('click', function(){
+  document.querySelector('.overlay').classList.add('is-open');
+})
+
+
+document.querySelector('.close-btn').addEventListener('click', function(){
+  document.querySelector('.overlay').classList.remove('is-open');
+})
+
+
+document.querySelector('.overlay').addEventListener('click', function(e){
+  if(e.target == document.querySelector('.overlay')) {
+    document.querySelector('.overlay').classList.remove('is-open');
+  }
+})
+
+//main 
+
 let cur = 0;
 let len = $('.slide-item').length;
 
