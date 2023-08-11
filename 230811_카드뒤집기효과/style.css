@@ -3,31 +3,27 @@
   padding: 0;
   box-sizing: border-box;
 }
-
 .wrapper {
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   width: 100%;
   height: 100vh;
   background-color: #000;
   color: #fff;
 }
-
 .card {
   width: 500px;
   height: 300px;
   cursor: pointer;
 }
-
 .card-inner {
   width: 100%;
   height: 100%;
   position: relative;
 }
-
 .front,
-.back {  
+.back {
   position: absolute;
   top: 0;
   left: 0;
@@ -35,17 +31,16 @@
   width: 100%;
   height: 100%;
   padding: 20px 30px;
-  background-image: linear-gradient(45deg, #0045c7, #ff2c7d);
+  background : linear-gradient(45deg, #0045c7, #ff2c7d);
   border-radius: 15px;
-  /* 뒷면을 보여줄지,  숨길지 결정
-  visible / hidden */
+  /* 뒤집어진 뒷면을 보여줄지, 숨길지 결정
+    visible / hidden
+  */
   backface-visibility: hidden;
 }
-
 .back {
   transform: rotateY(180deg);
 }
-
 .row {
   display: flex;
   justify-content: space-between;
@@ -53,11 +48,12 @@
 }
 
 .map-img {
+  width: 150px;
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  opacity: 0.3;
+  opacity: .3;
   z-index: -1;
 }
 
@@ -74,11 +70,6 @@
   margin-top: 60px;
 }
 
-
-.card-cvv img {
-  width: 100PX;
-}
-
 .card-holder {
   font-size: 12px;
   margin-top: 40px;
@@ -89,3 +80,6 @@
   margin-top: 10px;
 }
 
+.card-cvv img {
+  width: 100px;
+}
