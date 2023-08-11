@@ -3,7 +3,6 @@
   padding: 0;
   box-sizing: border-box;
 }
-
 .wrapper {
   display: flex;
   justify-content: center;
@@ -13,7 +12,6 @@
   background-color: #000;
   color: #fff;
 }
-
 .card {
   width: 500px;
   height: 300px;
@@ -21,9 +19,15 @@
 }
 
 .card-inner {
+  position: relative;
   width: 100%;
   height: 100%;
   position: relative;
+  transform-style: preserve-3d;
+}
+
+.card:hover .card-inner {
+  transform: rotateY(-180deg);
 }
 
 .front,
@@ -45,6 +49,7 @@
 
 .back {
   /* transform: rotateY(180deg); */
+  transform: rotateY(180deg);
 }
 
 .row {
@@ -52,7 +57,6 @@
   justify-content: space-between;
   align-items: center;
 }
-
 .map-img {
   position: absolute;
   top: 0;
@@ -61,41 +65,33 @@
   opacity: .3;
   z-index: -1;
 }
-
 .chip-img {
   width: 60px;
 }
-
 .logo-img {
   width: 80px;
 }
-
 .card-num {
   font-size: 35px;
   margin-top: 60px;
 }
-
 .card-holder {
   font-size: 12px;
   margin-top: 40px;
 }
-
 .card-name {
   font-size: 22px;
   margin-top: 10px;
 }
-
 .bar {
   height: 60px;
   background-color: #222;
   margin-left: -30px;
   margin-right: -30px;
 }
-
 .card-cvv {
   margin-top: 20px;
 }
-
 .card-cvv img {
   /* container 안에 공간이 남을 경우 flex-grow 
     속성으로 남는 공간을 차지하게 할 수 있다.
@@ -104,18 +100,15 @@
   flex-grow: 1;
   height: 50px;
 }
-
 .card-cvv p {
   padding: 10px;
   font-size: 22px;
   color: #000;
   background-color: #fff;
 }
-
 .card-text {
   font-size: 14px;
 }
-
 .card-text,
 .card-sig {
   margin-top: 30px;
