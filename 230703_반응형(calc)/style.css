@@ -13,9 +13,6 @@ a {
   max-width: 1200px;
   background-color: #e5e5e5;
   margin: 0 auto;
-  /* 마진 상쇄 현상 */
-  /* 인접해 있는 블록요소 두 개가 겹칠 때 발생(상,하) */
-  /* 사이에 1px 이라도 간격이 생기면 마진 상쇄 현상이 사라진다. */
   border: 1px solid transparent;
 }
 
@@ -24,18 +21,6 @@ a {
   flex-wrap: wrap;
   justify-content: center;
 }
-
-
-.title{
-  width: 250px;
-  margin: 30px 0 10px 10px;
-  padding: 20px;
-  color: #fff;
-  background-color: #06c;
-  text-align: center;
-  border-radius: 10px;
-}
- 
 
 .menu_box {
   display: inline-block;
@@ -78,35 +63,4 @@ a {
   overflow: hidden;
   text-overflow: ellipsis;
   margin-top: 20px;
-}
-
-.menu_info {
-  display: flex;
-  justify-content: space-between;
-  padding: 10px 0;
-}
-
-.date,
-.count {
-  font-size: 14px;
-  color: #666;
-}
-
-@media screen and (max-width : 1200px) {
-  .menu_box {
-    width: calc((100% - 80px) / 3);
-  }  
-}
-
-
-@media screen and (max-width : 768px) {
-.menu_box {
-  width: calc((100% - 60px) / 2);
- }
-}
-
-@media screen and (max-width : 560px ) {
-  .menu_box {
-    width: calc(100% - 40px);
-  }
 }
