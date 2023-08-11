@@ -3,6 +3,7 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 .wrapper {
   display: flex;
   justify-content: center;
@@ -12,16 +13,19 @@
   background-color: #000;
   color: #fff;
 }
+
 .card {
   width: 500px;
   height: 300px;
   cursor: pointer;
 }
+
 .card-inner {
   width: 100%;
   height: 100%;
   position: relative;
 }
+
 .front,
 .back {
   position: absolute;
@@ -38,9 +42,11 @@
   */
   backface-visibility: hidden;
 }
+
 .back {
-  transform: rotateY(180deg);
+  /* transform: rotateY(180deg); */
 }
+
 .row {
   display: flex;
   justify-content: space-between;
@@ -48,7 +54,6 @@
 }
 
 .map-img {
-  width: 150px;
   position: absolute;
   top: 0;
   left: 0;
@@ -80,6 +85,38 @@
   margin-top: 10px;
 }
 
+.bar {
+  height: 60px;
+  background-color: #222;
+  margin-left: -30px;
+  margin-right: -30px;
+}
+
+.card-cvv {
+  margin-top: 20px;
+}
+
 .card-cvv img {
-  width: 100px;
+  /* container 안에 공간이 남을 경우 flex-grow 
+    속성으로 남는 공간을 차지하게 할 수 있다.
+    flow-grow 디폴트 값 = 0 / 음수 설정 X
+  */
+  flex-grow: 1;
+  height: 50px;
+}
+
+.card-cvv p {
+  padding: 10px;
+  font-size: 22px;
+  color: #000;
+  background-color: #fff;
+}
+
+.card-text {
+  font-size: 14px;
+}
+
+.card-text,
+.card-sig {
+  margin-top: 30px;
 }
