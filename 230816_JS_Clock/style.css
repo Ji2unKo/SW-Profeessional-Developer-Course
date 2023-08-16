@@ -146,7 +146,7 @@ body {
 
 /* phone background-image 변경 */
 .wrapper.morning #phone {
-  background-image: url('./images/phone_morning.png');
+  background-image: url('./images/phone_morn.png');
 }
 
 .wrapper.afternoon #phone {
@@ -154,9 +154,45 @@ body {
 }
 
 .wrapper.evening #phone {
-  background-image: url('./images/phone_evening.png');
+  background-image: url('./images/phone_even.png');
 }
 
 .wrapper.night #phone {
-  background-image: url('./images/phone_night.png');
+  background-image: url('./images/phone_nigh.png');
+}
+
+#phone div {
+  position: absolute;
+  top: 76px;
+  left: 103px;
+  width: 419px;
+  height: 240px;
+  overflow: hidden;
+}
+
+.phone-time {
+  position: absolute;
+  top: 50%;
+  left: 30px;
+  transform: translateY(-50%);
+  font-size: 48px;
+  font-weight: 700;
+  color: #333;
+  z-index: 9999;
+}
+
+#phone img {
+  position: absolute;
+}
+
+#phone img:first-of-type {
+  top: 0;
+  left: 0;
+  width: 360px;
+}
+
+#phone img:last-of-type {
+  top: 10px;
+  left: 10px;
+  width: 800px;
 }
