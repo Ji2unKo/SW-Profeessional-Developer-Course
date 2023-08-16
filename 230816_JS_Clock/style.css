@@ -178,7 +178,7 @@ body {
   font-size: 48px;
   font-weight: 700;
   color: #333;
-  z-index: 9999;
+  z-index: 10;
 }
 
 #phone img {
@@ -196,3 +196,4 @@ body {
   left: 10px;
   width: 800px;
 }
+
