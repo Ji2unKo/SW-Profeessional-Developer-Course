@@ -16,18 +16,19 @@
     // 값들을 comma(,) 구분해서 엑셀처럼 저장할 수 있는 자료형
     let computer = ['삼성', 'LG', 'APLLE', 'DELL'];
     console.log(computer)
-    document.querySelector('.com').innerHTML = computer[1];
+    // document.querySelector('.com').innerHTML = computer[1];
     computer[0] = 'SAMSUNG';
     computer[3] = 'SAMBO';
     console.log(computer);
 
     // Object {중괄호}
     // {key : value}
+    // object 안에는 array도 들어갈 수 있다.
     let sw = {
-      computer : '삼성',
-      name : 'jieun'
+      computer : ['삼성', 'LG', 'APLLE', 'DELL'],
+      name : ['지은', '예진', '한나', '서우']
     }
-    document.querySelector('.com').innerHTML = '내 컴퓨터는' + sw.computer + '이고, 내 이름은' + sw.name + '이야';
+    document.querySelector('.com').innerHTML = '내 컴퓨터는 ' + sw.computer[2] + '이고, 내 이름은 ' + sw.name[0] + '이야';
     // 1. object.['내가 가져오고 싶은 value의 key값']
     // console.log(sw['computer']);
     // console.log(sw['name']);
