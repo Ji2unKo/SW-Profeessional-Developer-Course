@@ -5,7 +5,19 @@ let products = [
   img : 'https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/d98a444e-d21c-415f-9136-938c9e0ee419/%ED%85%8C%ED%81%AC-%ED%97%A4%EB%9D%BC-%EC%97%AC%EC%84%B1-%EC%8B%A0%EB%B0%9C-5psTyMig.png',
   title : '나이키 테크 헤라',
   price : '103,200 원',
-  size : ['230', '235', '240', '245', '250']
+  size : ['220', '225', '230', '235']
+},
+{
+  img :'https://static.nike.com/a/images/t_prod_ss/w_640,c_limit,f_auto/e139f47a-fd3f-42fb-b2d6-ce708d7df6e0/%EC%9A%B0%EB%A8%BC%EC%8A%A4-%EC%97%90%EC%96%B4-%ED%8F%AC%EC%8A%A4-1-pearl-pink-dr9503-601-%EC%B6%9C%EC%8B%9C%EC%9D%BC.jpg',
+  title : '우먼스 에어 포스 1 Pearl Pink',
+  price : '159,000 원',
+  size : ['220', '225', '230', '235']
+},
+{
+  img : 'https://static.nike.com/a/images/t_prod_ss/w_640,c_limit,f_auto/96089acc-96b4-4d22-8af9-d6bf36f9e8ae/%EC%9A%B0%EB%A8%BC%EC%8A%A4-%EC%97%90%EC%96%B4-%EC%A1%B0%EB%8D%98-1-%ED%95%98%EC%9D%B4-%E2%80%98coconut-milk-and-sail%E2%80%99-fd2596-600-%EC%B6%9C%EC%8B%9C%EC%9D%BC.jpg',
+  title : '우먼스 에어 조던 1 하이',
+  price : '219,000 원',
+  size : ['220', '225', '230', '235']
 },
 {
   img :'https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/cb279783-72ff-4d58-8159-61bf30e09493/%EC%A1%B0%EB%8D%98-1-%EB%A1%9C%EC%9A%B0-%EC%95%8C%ED%8A%B8-%EB%B2%A0%EC%9D%B4%EB%B9%84-%EC%8B%A0%EB%B0%9C-HfWYTtmi.png',
@@ -14,11 +26,17 @@ let products = [
   size : ['80', '90', '100', '110']
 },
 {
-  img : 'https://static.nike.com/a/images/t_prod_ss/w_640,c_limit,f_auto/96089acc-96b4-4d22-8af9-d6bf36f9e8ae/%EC%9A%B0%EB%A8%BC%EC%8A%A4-%EC%97%90%EC%96%B4-%EC%A1%B0%EB%8D%98-1-%ED%95%98%EC%9D%B4-%E2%80%98coconut-milk-and-sail%E2%80%99-fd2596-600-%EC%B6%9C%EC%8B%9C%EC%9D%BC.jpg',
-  title : '우먼스 에어 조던 1 하이',
-  price : '219,000 원',
-  size : ['220', '225', '230', '235']
-}
+  img :'https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/821a8066-130f-46d8-8b8e-22147c1afc85/%EB%8D%A9%ED%81%AC-%EB%A1%9C%EC%9A%B0-%EB%B2%A0%EC%9D%B4%EB%B9%84-%EC%8B%A0%EB%B0%9C-Y9tQEOaF.png',
+  title : '나이키 덩크 로우',
+  price : '52,000 원',
+  size : ['80', '90', '100', '110']
+},
+{
+  img :'https://static.nike.com/a/images/t_prod_ss/w_640,c_limit,f_auto/f5de78fb-5616-434f-8ca6-e48b1d05cd07/%EC%A1%B0%EB%8D%98-1-%ED%95%98%EC%9D%B4-toddler-coconut-milk-and-sail-fd2598-600-%EC%B6%9C%EC%8B%9C%EC%9D%BC.jpg',
+  title : '조던 1 하이 (Toddler) Coconut Milk and Sail',
+  price : '99,000 원',
+  size : ['80', '90', '100', '110']
+},
 ]
 
 // document.querySelector('.box-item img').src = products[0].img;
@@ -82,5 +100,14 @@ products.forEach(function(item){
   let boxTitle = document.createElement('h2');
   boxTitle.innerHTML = item.title;
   shoInfo.appendChild(boxTitle);
+
+  let boxPrice = document.createElement('p');
+  boxPrice.innerHTML = item.price;
+  shoInfo.appendChild(boxPrice)
+
+  let boxSize = document.createElement('p')
+  boxSize.innerHTML = item.size;
+  shoInfo.appendChild(boxSize)
+
 })
 
