@@ -44,14 +44,14 @@ let products = [
 // document.querySelectorAll('.sho-info p')[0].innerHTML = products[0].price; 
 // document.querySelectorAll('.sho-info p')[1].innerHTML = products[0].size;
 
-let boxItems = document.querySelectorAll('.box-item');
+// let boxItems = document.querySelectorAll('.box-item');
 
-boxItems.forEach(function(item, index){
-  item.querySelector('img').src = products[index].img;
-  item.querySelector('.sho-info h2').innerHTML = products[index].title;
-  item.querySelectorAll('.sho-info p')[0].innerHTML = products[index].price;
-  item.querySelectorAll('.sho-info p')[1].innerHTML = products[index].size;
-})
+// boxItems.forEach(function(item, index){
+//   item.querySelector('img').src = products[index].img;
+//   item.querySelector('.sho-info h2').innerHTML = products[index].title;
+//   item.querySelectorAll('.sho-info p')[0].innerHTML = products[index].price;
+//   item.querySelectorAll('.sho-info p')[1].innerHTML = products[index].size;
+// })
 
 // 프론트엔드 개발자가 하는 역할
 // 서버가 보낸 데이터를 html에 꽃아준다
@@ -81,33 +81,61 @@ boxItems.forEach(function(item, index){
 // 4. .sho-info 안에 p tag 생성 => innerHTML = products.price
 // 5. .sho-info 안에 p tag 생성 => innerHTML = products.size
 
-let boxList = document.querySelector('.box-list')
+// let boxList = document.querySelector('.box-list')
 
-products.forEach(function(item){
-  let boxItem = document.createElement('div')
-  boxItem.classList.add('box-item')
-  boxList.appendChild(boxItem);
+// products.forEach(function(item){
+//   let boxItem = document.createElement('div')
+//   boxItem.classList.add('box-item')
+//   boxList.appendChild(boxItem);
 
-  let boxImg = document.createElement('img');
-  boxImg.src = item.img;
-  boxImg.alt = item.title;
-  boxItem.appendChild(boxImg);
+//   let boxImg = document.createElement('img');
+//   boxImg.src = item.img;
+//   boxImg.alt = item.title;
+//   boxItem.appendChild(boxImg);
 
-  let shoInfo = document.createElement('div')
-  shoInfo.classList.add('sho-info');
-  boxItem.appendChild(shoInfo);
+//   let shoInfo = document.createElement('div')
+//   shoInfo.classList.add('sho-info');
+//   boxItem.appendChild(shoInfo);
 
-  let boxTitle = document.createElement('h2');
-  boxTitle.innerHTML = item.title;
-  shoInfo.appendChild(boxTitle);
+//   let boxTitle = document.createElement('h2');
+//   boxTitle.innerHTML = item.title;
+//   shoInfo.appendChild(boxTitle);
 
-  let boxPrice = document.createElement('p');
-  boxPrice.innerHTML = item.price;
-  shoInfo.appendChild(boxPrice)
+//   let boxPrice = document.createElement('p');
+//   boxPrice.innerHTML = item.price;
+//   shoInfo.appendChild(boxPrice)
 
-  let boxSize = document.createElement('p')
-  boxSize.innerHTML = item.size;
-  shoInfo.appendChild(boxSize)
+//   let boxSize = document.createElement('p')
+//   boxSize.innerHTML = item.size;
+//   shoInfo.appendChild(boxSize)
 
+// })
+
+// Javascript로 html 생성하는 방법2 (최신문법)
+// let pTag = '<p class="txt">html 생성~~</p>';
+// // .insertAdjacentHTML(위치, 문자) => 문자형 html을 넣어주는 함수
+// // 첫번째 파라미터 : 추가 할 위치(beforeend = 안쪽 맨 밑)
+// // 두번째 파라미터 : 추가 할 html 문자(pTag)
+// document.querySelector('.box-list').insertAdjacentHTML('beforeend', pTag);
+
+
+// insertAdjacentHTML로 .box-item 완성
+products.forEach(function(item, index){
+  let boxItem = `<div class="box-item"></div>`;
+  document.querySelector('.box-list').insertAdjacentHTML('beforeend', boxItem);
+
+  let boxImg = `<img src="${item.img}" alt="${item.title}">`
+  document.querySelectorAll('.box-item')[index].insertAdjacentHTML('beforeend', boxImg);
+
+  let shoInfo = `<div class="sho-info"></div>`;
+  document.querySelectorAll('.box-item')[index].insertAdjacentHTML('beforeend', shoInfo);
+
+  let boxTitle = `<h2>${item.title}</h2>`;
+  document.querySelectorAll('.sho-info')[index].insertAdjacentHTML('beforeend', boxTitle);
+
+  let boxPrice = `<p>${item.price}</p>`;
+  document.querySelectorAll('.sho-info')[index].insertAdjacentHTML('beforeend', boxPrice);
+
+  let boxSize = `<p>${item.size}</p>`;
+  document.querySelectorAll('.sho-info')[index].insertAdjacentHTML('beforeend', boxSize);
 })
-
