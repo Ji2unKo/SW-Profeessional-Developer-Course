@@ -5,10 +5,49 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Login mode change</title>
   <link rel="stylesheet" href="./style.css">
+  <!-- Favicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon_package_v0.16 (3)/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon_package_v0.16 (3)/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
 </head>
 <body>
   <div class="wrapper">
-    
+    <div class="loginwrap">
+      <img src="./images/logo-light.png" alt="logo">
+      <input type="text" placeholder="전화번호, 사용자 이름 또는 이메일">
+      <input type="password" placeholder="비밀번호">
+      <div class="btn">
+        <button class="loginBtn">로그인</button>
+        <div class="or">
+          <hr><p>또는</p><hr>
+        </div>
+        <div class="btn-group">
+          <a href="#">
+            <button class="facebookBtn">
+              <img src="./images/facebook-icon.png" alt="facebook-icon">
+              페이스북으로 로그인
+            </button>
+          </a>
+          <a href="#">
+            <button class="passwordBtn">비밀번호를 잊어버리셨어요?</button>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="account">
+      <p>계정이 없으신가요?</p>
+      <a href="#">가입하기</a>
+    </div>
+
+    <p class="app-txt">앱을 다운로드하세요.</p>
+
+    <div class="app">
+      <a href="#"><img src="./images/app-store.png" alt="app-store"></a>
+      <a href="#"><img src="./images/gg-play.png" alt="gg-play"></a>
+    </div>
   </div>
   <script src="./script.js"></script>
 </body>
