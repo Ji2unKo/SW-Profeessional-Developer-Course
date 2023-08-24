@@ -5,6 +5,7 @@
 // }
 // (x, y) => x + y;
 let btnLog = document.querySelector('.btn-login')
+let darkToggle = document.getElementById('darkmode-toggle');
 
 document.querySelectorAll('.animate-input').forEach((e) => {
   // e : .animate-input class가진 값을 하나씩 떼서 넘겨준 값
@@ -49,4 +50,19 @@ document.querySelectorAll('.animate-input').forEach((e) => {
     }
   }
 })
+
+// darkmode toggle
+// darkToggle 클릭 했을 때 
+// 텍스트 변경 : Darkmode -> Lightmode
+// body에 .dark class add
+
+darkToggle.onclick = (e) => {
+  e.preventDefault();
+  let body = document.querySelector('body');
+  body.classList.toggle('dark');
+
+  // 삼항 연산자
+  // 조건 ? 첫번째 좌측이 참일 때 실행할 코드(true) : 다음에 우측이 거짓일 때(false)
+  darkToggle.innerHTML = body.classList.contains('dark') ? 'Lightmode' : 'Darkmode';
+}
 
