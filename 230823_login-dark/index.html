@@ -3,52 +3,49 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Login mode change</title>
-  <link rel="stylesheet" href="./style.css">
-  <!-- Favicon -->
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon_package_v0.16 (3)/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon_package_v0.16 (3)/favicon-16x16.png">
-  <link rel="manifest" href="/site.webmanifest">
-  <meta name="msapplication-TileColor" content="#da532c">
-  <meta name="theme-color" content="#ffffff">
+  <title>Document</title>
 </head>
 <body>
   <div class="wrapper">
-    <div class="loginwrap">
-      <img src="./images/logo-light.png" alt="logo">
-      <input type="text" placeholder="전화번호, 사용자 이름 또는 이메일">
-      <input type="password" placeholder="비밀번호">
-      <div class="btn">
-        <button class="loginBtn">로그인</button>
-        <div class="or">
-          <hr><p>또는</p><hr>
-        </div>
-        <div class="btn-group">
-          <a href="#">
-            <button class="facebookBtn">
+    <div class="from-container">
+      <div class="from-box">
+        <h1 class="logo">
+          <img class="light-logo" src="./images/logo-light.png" alt="light-logo">
+          <img class="dark-logo" src="./images/logo-dark.png" alt="dark-logo">
+        </h1>
+
+        <div class="signin-from">
+          <div class="from-group">
+            <div class="animate-input">
+              <span>전화번호, 사용자 이름 또는 이메일</span>
+              <input type="text">
+            </div>
+          </div>
+          <div class="from-group">
+            <div class="animate-input">
+              <span>비밀번호</span>
+              <input type="password">
+              <button type="button">비밀번호 표시</button>
+            </div>
+          </div>
+          <div class="btn-group">
+            <button class="btn-login" type="button">로그인</button>
+          </div>
+          <div class="or-box">
+            <div></div>
+            <div>또는</div>
+            <div></div>
+          </div>
+          <div class="btn-group">
+            <button class="fd-btn" type="button">
               <img src="./images/facebook-icon.png" alt="facebook-icon">
-              페이스북으로 로그인
+              <span>페이스북으로 로그인</span>
             </button>
-          </a>
-          <a href="#">
-            <button class="passwordBtn">비밀번호를 잊어버리셨어요?</button>
-          </a>
+          </div>
+          <a href="" class="forgot-pw">비밀번호를 잊으셨나요?</a>
         </div>
       </div>
     </div>
-    <div class="account">
-      <p>계정이 없으신가요?</p>
-      <a href="#">가입하기</a>
-    </div>
-
-    <p class="app-txt">앱을 다운로드하세요.</p>
-
-    <div class="app">
-      <a href="#"><img src="./images/app-store.png" alt="app-store"></a>
-      <a href="#"><img src="./images/gg-play.png" alt="gg-play"></a>
-    </div>
   </div>
-  <script src="./script.js"></script>
 </body>
 </html>
