@@ -10,3 +10,284 @@ https://www.pexels.com/ko-kr/
 
 <!-- jQuery CDN -->
   <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+
+  PS C:\Users\USER\Desktop\SW-Profeessional-Developer-Course> cd 230831
+PS C:\Users\USER\Desktop\SW-Profeessional-Developer-Course\230831> npm init
+This utility will walk you through creating a package.json file.
+It only covers the most common items, and tries to guess sensible defaults.
+
+See `npm help init` for definitive documentation on these fields
+and exactly what they do.
+
+Use `npm install <pkg>` afterwards to install a package and
+save it as a dependency in the package.json file.
+
+Press ^C at any time to quit.
+package name: (230831)
+version: (1.0.0)
+description:
+entry point: (index.js)
+test command:
+git repository:
+keywords:
+author:
+license: (ISC)
+About to write to C:\Users\USER\Desktop\SW-Profeessional-Developer-Course\230831\package.json:
+
+{
+  "name": "230831",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
+
+
+PS C:\Users\USER\Desktop\SW-Profeessional-Developer-Course\230831> npm install express 
+
+added 58 packages, and audited 59 packages in 3s
+
+8 packages are looking for funding
+
+found 0 vulnerabilities
+PS C:\Users\USER\Desktop\SW-Profeessional-Developer-Course\230831> npm install -g nodemon
+
+added 33 packages in 2s
+
+3 packages are looking for funding
+PS C:\Users\USER\Desktop\SW-Profeessional-Developer-Course\230831> nodemon index.js
+nodemon : 이 시스템에서 스크립트를 실행할 수 없으므로 C:\Users\USER\AppData\Roaming\npm\nodemon.ps1 파일을 로드할 수 없습니다. 자세한 내용은 about_Execution_Policies(https 
+://go.microsoft.com/fwlink/?LinkID=135170)를 참조하십시오.
+위치 줄:1 문자:1
++ nodemon index.js
++ ~~~~~~~
+    + CategoryInfo          : 보안 오류: (:) [], PSSecurityException
+    + FullyQualifiedErrorId : UnauthorizedAccess
+PS C:\Users\USER\Desktop\SW-Profeessional-Developer-Course\230831> nodemon index.js
+[nodemon] 3.0.1
+[nodemon] to restart at any time, enter `rs`
+[nodemon] watching path(s): *.*
+[nodemon] watching extensions: js,mjs,cjs,json
+[nodemon] starting `node index.js`
+node:internal/modules/cjs/loader:1080
+  throw err;
+  ^
+
+Error: Cannot find module 'mongodb'
+Require stack:
+- C:\Users\USER\Desktop\SW-Profeessional-Developer-Course\230831\index.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1077:15)
+    at Module._load (node:internal/modules/cjs/loader:922:27)
+    at Module.require (node:internal/modules/cjs/loader:1143:19)
+    at require (node:internal/modules/cjs/helpers:110:18)
+    at Object.<anonymous> (C:\Users\USER\Desktop\SW-Profeessional-Developer-Course\230831\index.js:133:21)
+    at Module._compile (node:internal/modules/cjs/loader:1256:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Module.load (node:internal/modules/cjs/loader:1119:32)
+    at Module._load (node:internal/modules/cjs/loader:960:12)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    'C:\\Users\\USER\\Desktop\\SW-Profeessional-Developer-Course\\230831\\index.js'
+  ]
+}
+
+Node.js v18.16.1
+[nodemon] app crashed - waiting for file changes before starting...
+[nodemon] restarting due to changes...
+[nodemon] starting `node index.js`
+node:internal/modules/cjs/loader:1080
+  throw err;
+  ^
+
+Error: Cannot find module 'mongodb'
+Require stack:
+- C:\Users\USER\Desktop\SW-Profeessional-Developer-Course\230831\index.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1077:15)
+    at Module._load (node:internal/modules/cjs/loader:922:27)
+    at Module.require (node:internal/modules/cjs/loader:1143:19)
+    at require (node:internal/modules/cjs/helpers:110:18)
+    at Object.<anonymous> (C:\Users\USER\Desktop\SW-Profeessional-Developer-Course\230831\index.js:133:21)
+    at Module._compile (node:internal/modules/cjs/loader:1256:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Module.load (node:internal/modules/cjs/loader:1119:32)
+    at Module._load (node:internal/modules/cjs/loader:960:12)
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    'C:\\Users\\USER\\Desktop\\SW-Profeessional-Developer-Course\\230831\\index.js'
+  ]
+}
+
+Node.js v18.16.1
+PS C:\Users\USER\Desktop\SW-Profeessional-Developer-Course\230831> npm install ejs
+
+added 16 packages, and audited 75 packages in 1s
+
+10 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+PS C:\Users\USER\Desktop\SW-Profeessional-Developer-Course\230831> npm install mongodb@3.6.4 
+
+added 18 packages, and audited 93 packages in 3s
+
+  run `npm fund` for details
+
+1 moderate severity vulnerability
+
+To address all issues, run:
+  npm audit fix --force
+
+Run `npm audit` for details.
+PS C:\Users\USER\Desktop\SW-Profeessional-Developer-Course\230831> npm install body-parser
+
+added 2 packages, changed 2 packages, and audited 95 packages in 828ms
+
+  run `npm fund` for details
+
+1 moderate severity vulnerability
+
+To address all issues, run:
+  npm audit fix
+
+Run `npm audit` for details.
+PS C:\Users\USER\Desktop\SW-Profeessional-Developer-Course\230831> nodemon index.js
+[nodemon] 3.0.1
+[nodemon] to restart at any time, enter `rs`
+[nodemon] watching path(s): *.*
+[nodemon] watching extensions: js,mjs,cjs,json
+[nodemon] starting `node index.js`
+7000번 포트
+(node:2872) Warning: Accessing non-existent property 'MongoError' of module exports inside circular dependency
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:2872) DeprecationWarning: current Server Discovery and Monitoring engine is deprecated, and will be removed in a future version. To use the new Server Discover and Monitoring engine, pass option { useUnifiedTopology: true } to the MongoClient constructor.
+dsgdsgdsg
+[
+  { _id: 64eee635ab6b540ee8a9fc57, '아이디': '아이디', '비밀번호': 'qlalfqjsgh' },
+  { _id: 64eeec0963f5a22df0838821, '아이디': '아이디', '비밀번호': 'qlalfqjsgh' },
+  { _id: 64eeed462d22f01ff0b7dcf1, '아이디': 'qq', '비밀번호': 'ss' },
+  { _id: 64eeed482d22f01ff0b7dcf2, '아이디': 'qq', '비밀번호': 'ss' },
+  { _id: 64eeee22e8fc5b17806268a1, '아이디': 'sdgds', '비밀번호': 'sdgds' },
+  { _id: 64eeee39e8fc5b17806268a2, '아이디': '아이디', '비밀번호': 'dfsg' },
+  { _id: 64eeee6ffe3d6a2fbce2aff1, '아이디': '아이디', '비밀번호': 'dfsg' }
+]
+[
+  { _id: 64eee635ab6b540ee8a9fc57, '아이디': '아이디', '비밀번호': 'qlalfqjsgh' },
+  { _id: 64eeec0963f5a22df0838821, '아이디': '아이디', '비밀번호': 'qlalfqjsgh' },
+  { _id: 64eeed462d22f01ff0b7dcf1, '아이디': 'qq', '비밀번호': 'ss' },
+  { _id: 64eeed482d22f01ff0b7dcf2, '아이디': 'qq', '비밀번호': 'ss' },
+  { _id: 64eeee22e8fc5b17806268a1, '아이디': 'sdgds', '비밀번호': 'sdgds' },
+  { _id: 64eeee39e8fc5b17806268a2, '아이디': '아이디', '비밀번호': 'dfsg' },
+  { _id: 64eeee6ffe3d6a2fbce2aff1, '아이디': '아이디', '비밀번호': 'dfsg' }
+]
+[nodemon] restarting due to changes...
+[nodemon] starting `node index.js`
+7000번 포트
+(node:1116) Warning: Accessing non-existent property 'MongoError' of module exports inside circular dependency
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:1116) DeprecationWarning: current Server Discovery and Monitoring engine is deprecated, and will be removed in a future version. To use the new Server Discover and Monitoring engine, pass option { useUnifiedTopology: true } to the MongoClient constructor.
+MongoNetworkError: failed to connect to server [ac-kjtswva-shard-00-02.x5zpobn.mongodb.net:27017] on first connect [MongoError: bad auth : authentication failed
+    at Connection.messageHandler (C:\Users\USER\Desktop\SW-Profeessional-Developer-Course\230831\node_modules\mongodb\lib\core\connection\connection.js:359:19)
+    at Connection.emit (node:events:513:28)
+    at processMessage (C:\Users\USER\Desktop\SW-Profeessional-Developer-Course\230831\node_modules\mongodb\lib\core\connection\connection.js:451:10)
+    at TLSSocket.<anonymous> (C:\Users\USER\Desktop\SW-Profeessional-Developer-Course\230831\node_modules\mongodb\lib\core\connection\connection.js:620:15)
+    at TLSSocket.emit (node:events:513:28)
+    at addChunk (node:internal/streams/readable:324:12)
+    at readableAddChunk (node:internal/streams/readable:297:9)
+    at Readable.push (node:internal/streams/readable:234:10)
+    at TLSWrap.onStreamRead (node:internal/stream_base_commons:190:23) {
+  ok: 0,
+  code: 8000,
+  codeName: 'AtlasError'
+}]
+    at Pool.<anonymous> (C:\Users\USER\Desktop\SW-Profeessional-Developer-Course\230831\node_modules\mongodb\lib\core\topologies\server.js:438:11)
+    at Pool.emit (node:events:513:28)
+    at C:\Users\USER\Desktop\SW-Profeessional-Developer-Course\230831\node_modules\mongodb\lib\core\connection\pool.js:562:14
+    at C:\Users\USER\Desktop\SW-Profeessional-Developer-Course\230831\node_modules\mongodb\lib\core\connection\pool.js:1009:9
+    at callback (C:\Users\USER\Desktop\SW-Profeessional-Developer-Course\230831\node_modules\mongodb\lib\core\connection\connect.js:75:5)
+    at C:\Users\USER\Desktop\SW-Profeessional-Developer-Course\230831\node_modules\mongodb\lib\core\connection\connect.js:147:27
+    at C:\Users\USER\Desktop\SW-Profeessional-Developer-Course\230831\node_modules\mongodb\lib\core\auth\scram.js:185:14
+    at _callback (C:\Users\USER\Desktop\SW-Profeessional-Developer-Course\230831\node_modules\mongodb\lib\core\connection\connection.js:328:7)
+    at Connection.messageHandler (C:\Users\USER\Desktop\SW-Profeessional-Developer-Course\230831\node_modules\mongodb\lib\core\connection\connection.js:359:9)
+    at Connection.emit (node:events:513:28)
+[nodemon] restarting due to changes...
+[nodemon] starting `node index.js`
+7000번 포트
+(node:13584) Warning: Accessing non-existent property 'MongoError' of module exports inside circular dependency
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:13584) DeprecationWarning: current Server Discovery and Monitoring engine is deprecated, and will be removed in a future version. To use the new Server Discover and Monitoring engine, pass option { useUnifiedTopology: true } to the MongoClient constructor.
+dsgdsgdsg
+[nodemon] restarting due to changes...
+[nodemon] starting `node index.js`
+7000번 포트
+(node:11044) Warning: Accessing non-existent property 'MongoError' of module exports inside circular dependency
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:11044) DeprecationWarning: current Server Discovery and Monitoring engine is deprecated, and will be removed in a future version. To use the new Server Discover and Monitoring engine, pass option { useUnifiedTopology: true } to the MongoClient constructor.
+dsgdsgdsg
+[nodemon] restarting due to changes...
+[nodemon] starting `node index.js`
+7000번 포트
+(node:9972) Warning: Accessing non-existent property 'MongoError' of module exports inside circular dependency
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:9972) DeprecationWarning: current Server Discovery and Monitoring engine is deprecated, and will be removed in a future version. To use the new Server Discover and Monitoring engine, pass option { useUnifiedTopology: true } to the MongoClient constructor.
+dsgdsgdsg
+[]
+[]
+[nodemon] restarting due to changes...
+[nodemon] starting `node index.js`
+7000번 포트
+(node:15460) Warning: Accessing non-existent property 'MongoError' of module exports inside circular dependency
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:15460) DeprecationWarning: current Server Discovery and Monitoring engine is deprecated, and will be removed in a future version. To use the new Server Discover and Monitoring engine, pass option { useUnifiedTopology: true } to the MongoClient constructor.
+dsgdsgdsg
+[]
+[nodemon] restarting due to changes...
+[nodemon] starting `node index.js`
+C:\Users\USER\Desktop\SW-Profeessional-Developer-Course\230831\index.js:173
+
+
+
+SyntaxError: Unexpected end of input
+    at internalCompileFunction (node:internal/vm:73:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1178:20)
+    at Module._compile (node:internal/modules/cjs/loader:1220:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Module.load (node:internal/modules/cjs/loader:1119:32)
+    at Module._load (node:internal/modules/cjs/loader:960:12)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)
+    at node:internal/main/run_main_module:23:47
+
+Node.js v18.16.1
+[nodemon] app crashed - waiting for file changes before starting...
+[nodemon] restarting due to changes...
+[nodemon] starting `node index.js`
+7000번 포트
+(node:2000) Warning: Accessing non-existent property 'MongoError' of module exports inside circular dependency
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:2000) DeprecationWarning: current Server Discovery and Monitoring engine is deprecated, and will be removed in a future version. To use the new Server Discover and Monitoring engine, pass option { useUnifiedTopology: true } to the MongoClient constructor.
+dsgdsgdsg
+{ id: 'dsgds', pw: 'sdgds' }
+db에 저장완료!
+[ { _id: 64f0148e45732007d0effe5c, '아이디': 'dsgds', '비밀번호': 'sdgds' } ]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
