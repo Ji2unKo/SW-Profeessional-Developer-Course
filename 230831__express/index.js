@@ -162,7 +162,7 @@ app.post('/add', function(requests, response){
     // DB에서 total collection 총 데이터 수 꺼내오기.
   // 데이터를 전부 찾고 싶다면 find(), 하나만 찾고 싶으면 findOne()
   // name이 totalData인 데이터를 찾아달라는 쿼리문
-  db.collection('total').findOne({name : 'dataLength'}, function(error, result){
+  db.collection('total').findOne({name : 'datalength'}, function(error, result){
     console.log(result.totalData) // total collection있는 총 데이터 수
     let totalDataLength = result.totalData;
 
@@ -175,10 +175,26 @@ app.post('/add', function(requests, response){
     // update operator(연산자) $set, $inc(증가) 등 여러가지 
     // {$set : {totalData : 변경 할 값}}
     // {$inc : {totalData : 기존값에 더해줄 값}}
-    db.collection('total').updateOne({name : 'dataLength'}, { $inc : { totalData : 1}},function(error, result){
+    db.collection('total').updateOne({name : 'datalength'}, { $inc : { totalData : 1}},function(error, result){
       if(error) {
         return console.log(error)
       }
     })
   })
 })
+
+
+app.get('/add', function(requests, response){
+  // post라는 collection에 저장된 데이터를 꺼낸다.
+  db.collection('post').find().toArray(function(error, result){
+    console.log(result)
+    response.render('data.ejs', {log : result})
+  })
+
+
+})
+
+
+
+
+
