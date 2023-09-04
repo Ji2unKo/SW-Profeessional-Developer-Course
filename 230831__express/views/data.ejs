@@ -18,7 +18,7 @@
         <h3>PW : <%= log[i].비밀번호 %></h3>
       </div>
       <div>
-        <a href="/edit/<%= log[i]._id %>">
+        <a href="/edit/<%= log[i]._id % >">
           <button type="button" class="edit">수정</button>
         </a>
         <button type="button" class="delete" data-id="<%= log[i]._id %>">삭제</button>
