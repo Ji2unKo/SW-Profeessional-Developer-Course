@@ -389,3 +389,11 @@ passport.use(new LocalStrategy({
     }
   })
 }))
+
+// 로그인 성공 -> 세션정보를 만들어서 사람들이 보면 안되니깐 암호화
+// 씨리얼라이즈유저 : 유저 정보를 암호화
+passport.serializeUser(function(user, done){
+  done(null, user.id)
+})
+
+
