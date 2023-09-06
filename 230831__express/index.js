@@ -309,10 +309,11 @@ app.post('/join', function(requests, response){
       console.log('login collection에 저장완료!')
     })
 
-    db.collection('total').updateOne({name : 'dataLength'}, { $inc : { totalData : 1}},function(error, result){
+    db.collection('total').updateOne({name : 'dataLength'}, { $inc : { totalData : 1}}, function(error, result){
       if(error) {
         return console.log(error)
       }
+      response.redirect('/login')
     })
   })
 })
