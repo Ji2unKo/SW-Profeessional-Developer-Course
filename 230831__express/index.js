@@ -64,9 +64,9 @@ app.get('/test', function(requests, response){
 })
 
 // localhost:7000/login 으로 접속시 보여줄 화면 => login.html
-app.get('/login', function(requests, response){
-  response.sendFile(__dirname + '/login.html')
-})
+// app.get('/login', function(requests, response){
+//   response.sendFile(__dirname + '/login.html')
+// })
 
 // localhost:7000/map 으로 접속시 보여줄 화면 => map.html
 // map.html : 카카오 지도 OPEN API
@@ -93,13 +93,13 @@ app.get('/map', function(requests, response){
 let db;
 
 // Database access에서 만든 아이디:비밀번호
-MongoClient.connect('mongodb+srv://admin:wmfdlekt12@data.pvgodwt.mongodb.net/?retryWrites=true&w=majority', function(error, client){
+MongoClient.connect('mongodb+srv://admin:1234@cluster0.x5zpobn.mongodb.net/?retryWrites=true&w=majority', function(error, client){
   // 커넥션 에러의 99.9%가 url 오타
   if(error) {
     return console.log(error)
   }
 
-  db = client.db('data');
+  db = client.db('room');
   app.listen('7070', function(){
     console.log('7070번 port!')
   })
@@ -301,12 +301,19 @@ app.get('/join', function(requests, response){
 })
 
 app.post('/join', function(requests, response){
-  db.collection('total').findOne({ name : 'dataLength'}, function(error, result){
-    console.log(result.totalData)
+  db.collection('total').findOne({name : 'dataLength'}, function(error, result){
+    console.log(result)
     let totalDataLength = result.totalData;
 
     db.collection('login').insertOne({_id : totalDataLength + 1, name: requests.body.name, id : requests.body.id, pw : requests.body.pw }, function(error, result){
       console.log('login collection에 저장완료!')
     })
+
+    db.collection('total').updateOne({name : 'dataLength'}, { $inc : { totalData : 1}},function(error, result){
+      if(error) {
+        return console.log(error)
+      }
+    })
   })
 })
+
