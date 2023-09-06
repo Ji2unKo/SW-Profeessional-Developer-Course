@@ -305,7 +305,7 @@ app.post('/join', function(requests, response){
     console.log(result.totalData)
     let totalDataLength = result.totalData;
 
-    db.collection('login').insertOne({_id : totalDataLength + 1, name : requests.body.name, id : requests.body.id, pw : requests.body.pw}, function(error, result){
+    db.collection('login').insertOne({_id : totalDataLength + 1, name: requests.body.name, id : requests.body.id, pw : requests.body.pw }, function(error, result){
       console.log('login collection에 저장완료!')
     })
   })
