@@ -1,3 +1,52 @@
+// * 외부 라이브러리 설치 관련 코드는 최상단에 작성! *
+
+// 설치한 라이브러리 
+// 1. express(설치방법 => 244번 코드 확인)
+// 2. nodemon => npminstall -g nodemon
+// 3. body-perser => npm install body-parser
+// 4. MongoDB => npm install mongodb@3.6.4
+// 5. ejs => npm install ejs
+// 6. method-override => npm install method-override
+
+// express로 서버 만드는 문법
+const express = require('express');
+const app = express();
+
+// body-parser : 요청 데이터 해석을 도와주는 라이브러리
+const bodyParser = require('body-parser');
+app.use(bodyParser.urlencoded({extended : true}));
+
+// MongoDB
+const MongoClient = require('mongodb').MongoClient;
+
+// ejs 설치 (html에서 바로 데이터 바인딩 가능) <%= 데이터 %>
+app.set('view engine', 'ejs');
+
+// HTML form 태그에서는 GET, POST요청만 가능함!
+// PUT, DELETE 요청을 하고 싶다면 외부 라이브러리 설치 
+const methodOverride = require('method-override');
+app.use(methodOverride('_method'));
+
+// 폴더 내 모든 정적 파일 제공(js, css, image, fonts)
+app.use(express.static(__dirname))
+
+// port : 컴퓨터에는 외부 네트워크랑 통신 할 수 있는 여러개의 구멍이 있는데,
+//  그 중에 몇 번째 port로 접속할건지 지정 해줘야 한다.
+
+// listen이라는 함수로 서버를 열어준다.
+// listen(para1, para2)
+// para1 : 서버를 띄울 포트 번호
+// para2 : 실행 할 코드(콜백함수)
+// app.listen(7000. function(){})
+
+// 내 컴퓨터에서 7000번 포트로 진입 했을 때,
+// 콜백함수 안에 있는 코드 실행
+// localhost:7000(port number)로 접속
+app.listen(7000, function(){
+  console.log('7000번 포트')
+})
+
+
 // 서버 : 요청한 정보를 보내주는 프로그램
 // HTTP 요청 방식 네가지
 // 1. GET(읽기)
@@ -32,8 +81,8 @@
 // node_modules : 라이브러리 사용할 때 필요한 것들이 담긴 폴더
 
 // express로 서버 만드는 문법
-const express = require('express');
-const app = express();
+// const express = require('express');
+// const app = express();
 
 // port : 컴퓨터에는 외부 네트워크랑 통신을 할 수 있는 여러개의 구멍이 있는데,
 //  그 중에 몇 번째 port로 접속할건지 지정 해줘야 한다.
