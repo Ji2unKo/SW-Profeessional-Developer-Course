@@ -302,6 +302,11 @@ app.get('/join', function(requests, response){
 
 app.post('/join', function(requests, response){
   db.collection('total').findOne({ name : 'dataLength'}, function(error, result){
-    console.log(result)
+    console.log(result.totalData)
+    let totalDataLength = result.totalData;
+
+    db.collection('login').insertOne({_id : totalDataLength + 1, name : requests.body.name, id : requests.body.id, pw : requests.body.pw}, function(error, result){
+      console.log('login collection에 저장완료!')
+    })
   })
 })
