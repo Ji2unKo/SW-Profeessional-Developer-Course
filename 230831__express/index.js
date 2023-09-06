@@ -299,3 +299,9 @@ app.put('/edit', function(requests, response){
 app.get('/join', function(requests, response){
   response.render('join.ejs')
 })
+
+app.post('/join', function(requests, response){
+  db.collection('total').findOne({ name : 'dataLength'}, function(error, result){
+    console.log(result)
+  })
+})
