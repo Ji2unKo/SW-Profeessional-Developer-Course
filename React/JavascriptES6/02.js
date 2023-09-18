@@ -19,4 +19,12 @@ console.log(name)
 // num1, num2 라는 변수가 생성되고, 그 변수 안에는 배열의 순서대로 num1에는 arr배열의 0번째 값이 할당된다.
 let arr = [1,2,3,4,5]
 let [num1, num2] = arr;
-console.log(num1, num2, num3)
+console.log(num1, num2)
+
+// 배열 안에 나머지값 가져오기
+// ...rest
+// 배열 안에서 원하는 값을 뽑아낸 후, 나머지값을 저장하고 싶을 때 사용
+// rest 대신 다른 이름을 사용해도 상관없다.
+// 변수 앞에 ...이 가장 마지막에 위치해야 한다.
+let [a, b, c, ...rest] = arr
+console.log(rest)
